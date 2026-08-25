@@ -1,0 +1,310 @@
+import { readFileSync } from 'node:fs'
+import {
+  buildCompleteLearnQuestions,
+  buildExampleQuestions,
+  buildLearnQuestion,
+  buildLearnQuestionForFormat,
+  buildQuizConcepts,
+  buildTestQuestions,
+  countCompleteLearnQuestions,
+  gradeWrittenDefinition,
+  gradeWrittenTerm,
+  learnQuestionFormats,
+} from '../src/lib/quiz.js'
+import {
+  getLearnStage,
+  isMastered,
+  needsReview,
+  replaceLearnAttempt,
+  statsFor,
+  updateLearnAttempt,
+} from '../src/lib/progress.js'
+import { eligibleLearnQuestions, learnFormatOrder } from '../src/lib/learn.js'
+import {
+  clearLearnSession,
+  loadLastView,
+  loadLearnSession,
+  saveLastView,
+  saveLearnSession,
+} from '../src/lib/sessionStorage.js'
+
+const terms = JSON.parse(readFileSync(new URL('../src/data/terms.json', import.meta.url), 'utf8'))
+const errors = []
+
+function checkQuestions(label, questions) {
+  questions.forEach((question) => {
+    if (!question.id || !question.termId || !question.prompt) errors.push(`${label}: incomplete question.`)
+    if (!Array.isArray(question.choices) || question.choices.length < 2 || question.choices.length > 4) {
+      errors.push(`${label}: ${question.id} has ${question.choices?.length ?? 0} choices.`)
+    }
+    if (!question.choices?.some((choice) => choice.id === question.answerId)) {
+      errors.push(`${label}: ${question.id} does not contain its answer.`)
+    }
+    if (new Set(question.choices?.map((choice) => choice.id)).size !== question.choices?.length) {
+      errors.push(`${label}: ${question.id} has duplicate choice IDs.`)
+    }
+  })
+}
+
+for (const term of terms) {
+  checkQuestions(`example/${term.id}`, buildExampleQuestions([term], 1, terms))
+  checkQuestions(`test/${term.id}`, buildTestQuestions([term], 1, terms))
+  checkQuestions(`learn-recognition/${term.id}`, [buildLearnQuestion(term, 'recognition', terms)])
+  checkQuestions(`learn-example/${term.id}`, [buildLearnQuestion(term, 'example', terms)])
+
+  const written = buildLearnQuestion(term, 'written', terms, 0, 'definition')
+  const typedTerm = buildLearnQuestion(term, 'written', terms, 0, 'term')
+  const firstConcept = buildQuizConcepts([term])[0]
+  if (written.skill !== 'written' || written.expected !== firstConcept.definition || written.writtenKind !== 'definition' || written.choices) {
+    errors.push(`learn-written/${term.id}: invalid written-recall question.`)
+  }
+  if (typedTerm.skill !== 'written' || typedTerm.expected !== firstConcept.term || typedTerm.passage !== firstConcept.definition || typedTerm.writtenKind !== 'term') {
+    errors.push(`learn-typed-term/${term.id}: invalid typed-term question.`)
+  }
+}
+
+const quizConcepts = buildQuizConcepts(terms)
+if (quizConcepts.length !== 101) {
+  errors.push(`Expected 101 independently testable concepts; found ${quizConcepts.length}.`)
+}
+
+for (const concept of quizConcepts) {
+  const normalizedLabel = concept.term.toLowerCase().replace(/\([^)]*\)/g, '').trim()
+  if (concept.definition.toLowerCase().includes(normalizedLabel)) {
+    errors.push(`${concept.id}: answer label appears verbatim in its definition.`)
+  }
+  if (!Array.isArray(concept.examples) || concept.examples.length !== 3) {
+    errors.push(`${concept.id}: needs three passage-identification examples.`)
+  }
+  for (const example of concept.examples || []) {
+    if (example.text.toLowerCase().includes(normalizedLabel)) {
+      errors.push(`${concept.id}: answer label appears verbatim in an example passage.`)
+    }
+  }
+}
+
+const expectedLearnFormats = {
+  'multiple-choice-term': { skill: 'recognition', writtenKind: undefined },
+  'free-response-term': { skill: 'written', writtenKind: 'term' },
+  'free-response-definition': { skill: 'written', writtenKind: 'definition' },
+  example: { skill: 'example', writtenKind: undefined },
+}
+for (const format of learnQuestionFormats) {
+  const question = buildLearnQuestionForFormat(terms[0], format.id, terms)
+  const expected = expectedLearnFormats[format.id]
+  if (!expected || question.format !== format.id || question.skill !== expected.skill || question.writtenKind !== expected.writtenKind) {
+    errors.push(`Learn format ${format.id} did not generate the expected question type.`)
+  }
+}
+try {
+  buildLearnQuestionForFormat(terms[0], 'not-a-format', terms)
+  errors.push('An unknown Learn question format did not fail safely.')
+} catch {
+  // Expected: session controls should never be able to request an unknown format.
+}
+
+const exampleFormatSample = buildExampleQuestions(terms, 30, terms)
+if (exampleFormatSample.some((question) => question.kind !== 'exampleToTerm' || !question.passage)) {
+  errors.push('The example-question generator produced something other than passage-to-term identification.')
+}
+
+const duplicateExamples = terms
+  .flatMap((term) => term.examples.map((example) => example.text.trim().toLowerCase()))
+  .filter((text, index, all) => all.indexOf(text) !== index)
+
+if (duplicateExamples.length) errors.push(`Found ${duplicateExamples.length} duplicate example passage(s).`)
+
+let adaptiveProgress = {}
+const adaptiveId = terms[0].id
+adaptiveProgress = updateLearnAttempt(adaptiveProgress, adaptiveId, 'recognition', true)
+if (getLearnStage(statsFor(adaptiveProgress, adaptiveId)) !== 'written') {
+  errors.push('One correct recognition answer did not enqueue written recall.')
+}
+adaptiveProgress = updateLearnAttempt(adaptiveProgress, adaptiveId, 'written', false)
+if (getLearnStage(statsFor(adaptiveProgress, adaptiveId)) !== 'written') {
+  errors.push('A missed written answer did not remain in the written queue.')
+}
+adaptiveProgress = updateLearnAttempt(adaptiveProgress, adaptiveId, 'written', true)
+if (getLearnStage(statsFor(adaptiveProgress, adaptiveId)) !== 'example') {
+  errors.push('One correct written answer did not enqueue example practice.')
+}
+adaptiveProgress = updateLearnAttempt(adaptiveProgress, adaptiveId, 'example', true)
+if (!isMastered(statsFor(adaptiveProgress, adaptiveId))) {
+  errors.push('One correct example answer did not complete the term pipeline.')
+}
+adaptiveProgress = updateLearnAttempt(adaptiveProgress, adaptiveId, 'example', false)
+if (getLearnStage(statsFor(adaptiveProgress, adaptiveId)) !== 'example') {
+  errors.push('A missed retention example did not return the term to application practice.')
+}
+if (!needsReview(statsFor(adaptiveProgress, adaptiveId))) {
+  errors.push('A newly weakened skill was not added to review.')
+}
+
+let overrideProgress = updateLearnAttempt({}, adaptiveId, 'recognition', true)
+const beforeIncorrectWritten = statsFor(overrideProgress, adaptiveId)
+overrideProgress = updateLearnAttempt(overrideProgress, adaptiveId, 'written', false)
+overrideProgress = replaceLearnAttempt(
+  overrideProgress,
+  adaptiveId,
+  'written',
+  beforeIncorrectWritten,
+  true,
+)
+const overrideStats = statsFor(overrideProgress, adaptiveId)
+if (overrideStats.typedAttempts !== 1 || overrideStats.typedCorrect !== 1 || getLearnStage(overrideStats) !== 'example') {
+  errors.push('Manual written-answer override did not replace the incorrect attempt with a correct one.')
+}
+
+const exactGrade = gradeWrittenDefinition(terms[0].definition, terms[0].definition)
+const incompleteGrade = gradeWrittenDefinition('something in literature', terms[0].definition)
+if (!exactGrade.accepted || incompleteGrade.accepted) {
+  errors.push('Written-definition grading thresholds are not behaving as expected.')
+}
+
+const dramaticIrony = terms.find((term) => term.id === 'dramatic-irony')
+const reversedDramaticIrony = gradeWrittenDefinition(
+  'Dramatic irony is when the character knows what will happen before the audience does.',
+  dramaticIrony.definition,
+)
+if (reversedDramaticIrony.accepted) {
+  errors.push('A reversed dramatic-irony definition was automatically accepted.')
+}
+
+const exactTerm = gradeWrittenTerm('dramatic irony', dramaticIrony.term)
+const typoTerm = gradeWrittenTerm('dramatic irnoy', dramaticIrony.term)
+const vagueTerm = gradeWrittenTerm('irony', dramaticIrony.term)
+if (!exactTerm.accepted || !typoTerm.accepted || vagueTerm.accepted) {
+  errors.push('Typed-term automatic grading is not handling exact, typo, and overly broad answers correctly.')
+}
+
+const enabledFormatIds = learnQuestionFormats.map((format) => format.id)
+const completeLearnQuestions = buildCompleteLearnQuestions(terms, enabledFormatIds)
+const expectedFormatCounts = {
+  'multiple-choice-term': 101,
+  'free-response-term': 101,
+  'free-response-definition': 101,
+  example: 101,
+}
+
+if (countCompleteLearnQuestions(terms, enabledFormatIds) !== 404 || completeLearnQuestions.length !== 404) {
+  errors.push(`A fully enabled Learn session should contain 404 questions; found ${completeLearnQuestions.length}.`)
+}
+if (new Set(completeLearnQuestions.map((question) => question.id)).size !== completeLearnQuestions.length) {
+  errors.push('The complete Learn session contains duplicate question IDs.')
+}
+for (const [format, expectedCount] of Object.entries(expectedFormatCounts)) {
+  const actualCount = completeLearnQuestions.filter((question) => question.format === format).length
+  if (actualCount !== expectedCount) {
+    errors.push(`Learn format ${format} should contain ${expectedCount} questions; found ${actualCount}.`)
+  }
+}
+if (countCompleteLearnQuestions(terms, ['example']) !== 101) {
+  errors.push('An examples-only Learn session should contain one question per testable concept.')
+}
+if (countCompleteLearnQuestions(terms, []) !== 0 || buildCompleteLearnQuestions(terms, []).length !== 0) {
+  errors.push('A Learn session with no enabled formats should contain no questions.')
+}
+
+const stagedQuestions = buildCompleteLearnQuestions(
+  terms.slice(0, 3),
+  ['free-response-definition', 'example'],
+)
+const initiallyEligible = eligibleLearnQuestions(stagedQuestions)
+if (initiallyEligible.some((question) => question.format !== 'free-response-definition')) {
+  errors.push('Learn unlocked an example before its prerequisite definition was completed.')
+}
+const completedDefinition = initiallyEligible[0]
+const afterDefinition = eligibleLearnQuestions(stagedQuestions, [completedDefinition.id])
+const unlockedForConcept = afterDefinition.find((question) => question.conceptId === completedDefinition.conceptId)
+if (unlockedForConcept?.format !== 'example') {
+  errors.push('Completing a definition did not unlock that concept’s example question.')
+}
+const afterIncorrectAttempt = eligibleLearnQuestions(stagedQuestions)
+if (!afterIncorrectAttempt.some((question) => question.id === completedDefinition.id)) {
+  errors.push('An incorrectly answered Learn question was removed from the pending queue.')
+}
+if (learnFormatOrder.join('|') !== 'multiple-choice-term|free-response-term|free-response-definition|example') {
+  errors.push('Learn prerequisite formats are not in the expected progression order.')
+}
+
+const conceptById = new Map(quizConcepts.map((concept) => [concept.id, concept]))
+const exampleQuestions = completeLearnQuestions.filter((question) => question.format === 'example')
+if (new Set(exampleQuestions.map((question) => question.answerId)).size !== quizConcepts.length) {
+  errors.push('The Examples format did not include every testable concept exactly once.')
+}
+for (const question of exampleQuestions) {
+  const validPassages = conceptById.get(question.answerId)?.examples.map((example) => example.text) || []
+  if (!validPassages.includes(question.passage)) {
+    errors.push(`The Examples question for ${question.answerId} did not use one of that concept's passages.`)
+  }
+}
+
+const maximumTest = buildTestQuestions(terms, 600, terms)
+checkQuestions('test/600', maximumTest)
+if (maximumTest.length !== 600 || new Set(maximumTest.map((question) => question.id)).size !== 600) {
+  errors.push(`A maximum-length test should contain 600 distinct question instances; found ${maximumTest.length}.`)
+}
+
+const storageData = new Map()
+globalThis.localStorage = {
+  getItem: (key) => storageData.get(key) ?? null,
+  setItem: (key, value) => storageData.set(key, String(value)),
+  removeItem: (key) => storageData.delete(key),
+}
+const persistedFixture = {
+  phase: 'paused',
+  round: {
+    progress: {},
+    enabledFormats: ['free-response-definition', 'example'],
+    questions: stagedQuestions,
+    question: stagedQuestions[0],
+    completedIds: [stagedQuestions[1].id],
+    results: [],
+  },
+  ui: {
+    selected: null,
+    writtenAnswer: 'A saved partial response',
+    writtenReview: null,
+    answered: null,
+  },
+}
+if (!saveLearnSession(persistedFixture)) errors.push('A valid Learn session could not be saved.')
+const restoredFixture = loadLearnSession()
+if (
+  restoredFixture?.round.question.id !== persistedFixture.round.question.id
+  || restoredFixture?.round.completedIds[0] !== persistedFixture.round.completedIds[0]
+  || restoredFixture?.ui.writtenAnswer !== persistedFixture.ui.writtenAnswer
+) {
+  errors.push('The saved Learn session did not restore its queue, counter, and answer state.')
+}
+saveLastView('learn')
+if (loadLastView(['home', 'learn']) !== 'learn' || loadLastView(['home']) !== 'home') {
+  errors.push('The current app view did not persist safely across reloads.')
+}
+clearLearnSession()
+if (loadLearnSession() !== null) errors.push('Explicitly clearing a Learn session did not remove it.')
+delete globalThis.localStorage
+
+const answerPositions = new Set(
+  Array.from({ length: 24 }, () => {
+    const question = buildLearnQuestion(terms[0], 'recognition', terms)
+    return question.choices.findIndex((choice) => choice.id === question.answerId)
+  }),
+)
+const examplePassages = new Set(
+  Array.from({ length: 24 }, () => buildLearnQuestion(terms[0], 'example', terms).passage),
+)
+const writtenKinds = new Set(
+  Array.from({ length: 24 }, () => buildLearnQuestion(terms[0], 'written', terms).writtenKind),
+)
+if (answerPositions.size < 2) errors.push('Learn answers stayed in one multiple-choice position.')
+if (examplePassages.size < 2) errors.push('Learn repeated only one example passage for a term.')
+if (writtenKinds.size < 2) errors.push('Learn did not mix typed-term and written-definition recall.')
+
+if (errors.length) {
+  console.error(`Smoke tests failed with ${errors.length} issue(s):`)
+  errors.forEach((error) => console.error(`- ${error}`))
+  process.exit(1)
+}
+
+console.log('Quiz generation, prerequisite Learn progression, session persistence, written grading, test length, and answer integrity checks passed.')

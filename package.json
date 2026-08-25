@@ -1,0 +1,20 @@
+{
+  "name": "litmus-study",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run validate:content && vite build",
+    "preview": "vite preview",
+    "validate:content": "node scripts/validate-content.mjs",
+    "test": "npm run validate:content && node scripts/smoke-test.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {}
+}

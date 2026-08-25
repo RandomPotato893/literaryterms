@@ -1,0 +1,1220 @@
+[
+  {
+    "id": "allegory",
+    "term": "Allegory",
+    "category": "Narrative and Meaning",
+    "definition": "A narrative whose characters, places, and events consistently operate on a second level of meaning, often expressing a moral, political, or philosophical idea.",
+    "spottingTips": ["Map several story elements to a parallel set of ideas, not just one object to one meaning.", "Ask whether the literal story still works while also sustaining a larger abstract argument."],
+    "confusedWith": "Symbol: one symbol can carry added meaning; an allegory builds an extended system across much of a work.",
+    "examples": [
+      {"text": "In a valley where citizens rent their shadows from the mayor, one child grows her own shadow and is exiled.", "explanation": "The decisive clue is the sustained parallel: rented shadows represent controlled identity, while growing one represents independent thought.", "difficulty": "easy"},
+      {"text": "A ship's crew keeps polishing the brass nameplate while water rises through a hole they refuse to name.", "explanation": "The ship, crew, nameplate, and leak work together as a second-level story about protecting reputation while ignoring a crisis.", "difficulty": "medium"},
+      {"text": "Every winter, the Archive burns its oldest maps for warmth; by spring, no one remembers a road beyond the walls.", "explanation": "The entire action forms an allegory of sacrificing collective memory for short-term comfort, rather than offering a single isolated symbol.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-allegory", "https://www.britannica.com/art/allegory-art-and-literature"]
+  },
+  {
+    "id": "allusion",
+    "term": "Allusion",
+    "category": "Figurative Language",
+    "definition": "A brief, indirect reference to a person, story, event, place, artwork, or idea that readers are expected to recognize and connect to the present text.",
+    "spottingTips": ["Look for a familiar proper name, phrase, image, or situation left unexplained.", "Test what extra meaning the outside reference contributes."],
+    "confusedWith": "Quotation: a quotation repeats source words; an allusion may only hint at the source.",
+    "examples": [
+      {"text": "After opening the forbidden folder, Mina joked that curiosity had found its newest Pandora.", "explanation": "The decisive clue is the unexplained reference to Pandora, importing the idea of releasing unforeseen trouble.", "difficulty": "easy"},
+      {"text": "He scrubbed the stain until dawn, but the spot seemed to whisper, 'Still here.'", "explanation": "The obsessive washing and accusing stain allude to a famous guilt-haunted scene without naming it.", "difficulty": "medium"},
+      {"text": "The campaign promised an orchard and delivered a single wooden horse at the city gate.", "explanation": "The wooden horse alludes to Troy and suggests that the apparent gift conceals danger.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-allusion", "https://www.poetryfoundation.org/education/glossary/allusion"]
+  },
+  {
+    "id": "ambiguity",
+    "term": "Ambiguity",
+    "category": "Language and Style",
+    "definition": "Deliberate or meaningful openness in which a word, sentence, event, or whole work supports more than one reasonable interpretation.",
+    "spottingTips": ["Identify the exact wording or evidence that permits competing readings.", "Keep interpretations that fit the context instead of treating every vagueness as ambiguity."],
+    "confusedWith": "Vagueness: vagueness lacks precision; ambiguity offers two or more distinct plausible meanings.",
+    "examples": [
+      {"text": "Leah watched the guard with the telescope.", "explanation": "The decisive clue is the grammar: either Leah uses the telescope or the guard has it.", "difficulty": "easy"},
+      {"text": "At the verdict, Tomas smiled, folded the guilty note, and slipped it into his own pocket.", "explanation": "His smile and possession of the note plausibly suggest either triumph or concealed guilt, and the passage does not settle which.", "difficulty": "medium"},
+      {"text": "The final page says only, 'At last, the door recognized her.'", "explanation": "Recognized may mean physically admitted, remembered, or acknowledged her identity, leaving the ending intentionally open.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/index.html", "https://utsa.pressbooks.pub/fromcollegetocareer/back-matter/appendix-glossary-of-literary-terms/"]
+  },
+  {
+    "id": "anachronism",
+    "term": "Anachronism",
+    "category": "Narrative and Meaning",
+    "definition": "A person, object, expression, belief, or event placed in a historical period where it does not belong, either accidentally or for an artistic purpose.",
+    "spottingTips": ["Compare the detail with the work's established time period.", "Consider whether the mismatch is an error or a deliberate comment connecting eras."],
+    "confusedWith": "Flashback: a flashback moves narration to an earlier time; an anachronism leaves an out-of-time detail inside a period.",
+    "examples": [
+      {"text": "The medieval squire checked the castle's security camera before lowering the drawbridge.", "explanation": "The decisive clue is modern surveillance technology appearing in a medieval setting.", "difficulty": "easy"},
+      {"text": "In the 1920 ballroom, the bandleader calls the new dance 'viral.'", "explanation": "The contemporary social-media sense of viral does not belong to the established decade.", "difficulty": "medium"},
+      {"text": "Caesar pauses his address to complain that the crowd has muted him.", "explanation": "Muted imports digital-meeting language into ancient Rome, likely to connect political silencing across eras.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/anachronism", "https://utsa.pressbooks.pub/fromcollegetocareer/back-matter/appendix-glossary-of-literary-terms/"]
+  },
+  {
+    "id": "analogy",
+    "term": "Analogy",
+    "category": "Rhetoric and Argument",
+    "definition": "An explained comparison that uses a familiar relationship or process to clarify, reason about, or persuade readers concerning another one.",
+    "spottingTips": ["Look for two unlike subjects connected through a shared pattern.", "Ask what the comparison is being used to explain or prove."],
+    "confusedWith": "Metaphor: a metaphor identifies one thing as another; an analogy develops correspondences to explain or argue.",
+    "examples": [
+      {"text": "A rumor is like spilled ink: the farther you wipe it, the more surfaces it can stain.", "explanation": "The decisive clue is that the behavior of ink explains how attempts to stop a rumor may spread it.", "difficulty": "easy"},
+      {"text": "Editing a draft resembles pruning a tree; removing healthy-looking branches can direct energy toward stronger growth.", "explanation": "The comparison maps selective cutting in gardening onto revision to explain why deletion can improve writing.", "difficulty": "medium"},
+      {"text": "The judge argued that precedent is a shoreline, not a cage: it shapes the current without preventing every new wave.", "explanation": "The sustained shoreline-and-wave relationship clarifies how precedent guides but does not fully determine later decisions.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://owl.purdue.edu/owl/general_writing/academic_writing/logic_in_argumentative_writing/index.html", "https://www.britannica.com/art/analogy-literature"]
+  },
+  {
+    "id": "anaphora",
+    "term": "Anaphora",
+    "category": "Rhetoric and Syntax",
+    "definition": "Repetition of the same word or phrase at the beginnings of successive clauses, sentences, or verse lines.",
+    "spottingTips": ["Mark repeated openings rather than repeated endings.", "Check that the repetition occurs across neighboring grammatical units."],
+    "confusedWith": "Epistrophe: anaphora repeats beginnings; epistrophe repeats endings.",
+    "examples": [
+      {"text": "We will listen in the hall. We will listen at the gate. We will listen until they answer.", "explanation": "The decisive clue is 'We will listen' repeated at the beginning of three sentences.", "difficulty": "easy"},
+      {"text": "No map named the river, no sign marked the bridge, no bell warned the town.", "explanation": "Each parallel clause begins with 'no,' making the opening repetition anaphora.", "difficulty": "medium"},
+      {"text": "Because the lock remembered, because the key refused, because the door had chosen, we slept outside.", "explanation": "The repeated initial 'because' phrase frames three dependent clauses; its placement, not merely frequency, is decisive.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-anaphora", "https://www.poetryfoundation.org/education/glossary/anaphora"]
+  },
+  {
+    "id": "anastrophe",
+    "term": "Anastrophe",
+    "category": "Rhetoric and Syntax",
+    "definition": "A marked reversal of ordinary word order, usually used to emphasize a word, create rhythm, or give a line a distinctive voice.",
+    "spottingTips": ["Rewrite the sentence in normal prose order and compare.", "Look for modifiers, objects, or complements moved ahead of where English usually puts them."],
+    "confusedWith": "Inversion: often used as a synonym; anastrophe especially names conspicuous reversal within a phrase or sentence.",
+    "examples": [
+      {"text": "Bright was the lantern above the empty dock.", "explanation": "The decisive clue is the predicate adjective 'Bright' moved before the verb and subject instead of 'The lantern was bright.'", "difficulty": "easy"},
+      {"text": "This promise I will keep, though every witness leaves.", "explanation": "The object 'This promise' is moved before the subject and verb for emphasis.", "difficulty": "medium"},
+      {"text": "Into the patient earth fell the names we could no longer carry.", "explanation": "The prepositional phrase and verb precede the subject, reversing ordinary order to delay and stress 'the names.'", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://rhetoric.byu.edu/Figures/A/anastrophe.htm", "https://www.britannica.com/art/rhetoric"]
+  },
+  {
+    "id": "anecdote",
+    "term": "Anecdote",
+    "category": "Narrative and Meaning",
+    "definition": "A brief account of a specific incident, often inserted to illustrate a point, reveal character, establish credibility, or engage an audience.",
+    "spottingTips": ["Look for a compact mini-story with a concrete event.", "Ask what larger claim or character trait the incident supports."],
+    "confusedWith": "Example: an example may be hypothetical or nonnarrative; an anecdote recounts an incident.",
+    "examples": [
+      {"text": "When I was nine, I returned a lost wallet and spent the afternoon certain the police would arrest me for touching it.", "explanation": "The decisive clue is a short personal incident used to introduce a point about childhood logic.", "difficulty": "easy"},
+      {"text": "The principal began her speech by recalling the morning one student held an umbrella over a rival team's injured runner.", "explanation": "The brief event illustrates the speech's larger claim about sportsmanship.", "difficulty": "medium"},
+      {"text": "Before discussing city design, the essayist tells of missing a bus because the only bench faced away from the street.", "explanation": "The compact experience functions as evidence for a broader argument about careless public design.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/narrative_essays.html", "https://www.britannica.com/art/anecdote"]
+  },
+  {
+    "id": "antimetabole",
+    "term": "Antimetabole",
+    "category": "Rhetoric and Syntax",
+    "definition": "Repetition of words or phrases in reverse grammatical order, producing an AB–BA pattern.",
+    "spottingTips": ["Label the repeated key words A and B; their second appearance should reverse to B and A.", "Confirm that the actual wording repeats, not only the ideas."],
+    "confusedWith": "Chiasmus: chiasmus reverses structure or concepts; antimetabole specifically repeats the same words in reverse.",
+    "examples": [
+      {"text": "We shape our rooms, and then our rooms shape us.", "explanation": "The decisive clue is the repeated words 'we/rooms/shape' returning in reversed roles.", "difficulty": "easy"},
+      {"text": "She did not leave the work; the work left her.", "explanation": "The same nouns and verb recur in a reversed subject-object pattern.", "difficulty": "medium"},
+      {"text": "The town wrote its laws in fear, until fear wrote the town into its laws.", "explanation": "The repeated terms town, wrote, laws, and fear trade positions in the second clause, creating an expanded AB–BA reversal.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://rhetoric.byu.edu/Figures/A/antimetabole.htm", "https://www.britannica.com/art/rhetoric"]
+  },
+  {
+    "id": "antithesis",
+    "term": "Antithesis",
+    "category": "Rhetoric and Syntax",
+    "definition": "A balanced construction that places sharply contrasting words or ideas in parallel grammatical form.",
+    "spottingTips": ["Find a clear opposition such as private/public or surrender/resist.", "Check whether matching syntax makes the contrast more forceful."],
+    "confusedWith": "Juxtaposition: any nearby contrast is juxtaposition; antithesis uses deliberately balanced phrasing.",
+    "examples": [
+      {"text": "She spoke softly but acted boldly.", "explanation": "The decisive clue is the balanced verb-adverb structure contrasting softly with boldly.", "difficulty": "easy"},
+      {"text": "The law was written for order, yet enforced through chaos.", "explanation": "Parallel prepositional phrases place order and chaos in direct opposition.", "difficulty": "medium"},
+      {"text": "They inherited a city rich in monuments and poor in memory.", "explanation": "The matched adjective-preposition-noun units sharpen the contrast between visible commemoration and actual remembrance.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://rhetoric.byu.edu/Figures/A/antithesis.htm", "https://www.britannica.com/art/antithesis"]
+  },
+  {
+    "id": "anti-hero",
+    "term": "Anti-hero",
+    "category": "Character",
+    "definition": "A central character who lacks conventional heroic qualities such as courage, nobility, idealism, or moral certainty but still anchors the audience's interest.",
+    "spottingTips": ["Identify the story's central figure, then note unheroic motives, methods, or limitations.", "Do not assume that flawed means villainous; an anti-hero may still pursue worthwhile ends."],
+    "confusedWith": "Antagonist: an anti-hero is an unconventional central figure; an antagonist opposes the protagonist.",
+    "examples": [
+      {"text": "Nico saves the village only because the flood threatens his hidden gold beneath the mill.", "explanation": "The decisive clue is that the central rescuer acts from selfish fear rather than heroic duty.", "difficulty": "easy"},
+      {"text": "A timid clerk exposes corruption by anonymously mailing evidence, then denies everything when an innocent guard is blamed.", "explanation": "The protagonist does something valuable but lacks the bravery and moral steadiness of a traditional hero.", "difficulty": "medium"},
+      {"text": "Mara narrates her plan to free the prisoners while charging each family a fee she knows they cannot afford.", "explanation": "Her liberating goal is compromised by exploitation, making her an ethically troubled focal character rather than a straightforward villain.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/antihero", "https://utsa.pressbooks.pub/fromcollegetocareer/back-matter/appendix-glossary-of-literary-terms/"]
+  },
+  {
+    "id": "antagonist",
+    "term": "Antagonist",
+    "category": "Character",
+    "definition": "The character, group, institution, force, or condition that most directly obstructs the protagonist's goal.",
+    "spottingTips": ["First identify what the protagonist wants, then locate the strongest opposition.", "Remember that the antagonist need not be evil or even human."],
+    "confusedWith": "Villain: a villain is morally harmful; an antagonist is defined by opposition and may be justified.",
+    "examples": [
+      {"text": "Jori races to deliver medicine while the warlord's patrol closes every road.", "explanation": "The patrol is the decisive opposing force blocking Jori's goal.", "difficulty": "easy"},
+      {"text": "In the climber's story, the mountain's sudden storms repeatedly defeat her attempts to reach the observatory.", "explanation": "The nonhuman mountain weather functions as antagonist because it obstructs the protagonist.", "difficulty": "medium"},
+      {"text": "A public defender tries to free a client, while a truthful witness insists on evidence that makes acquittal impossible.", "explanation": "The witness serves as antagonist through opposition, even though telling the truth is not villainous.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://utsa.pressbooks.pub/fromcollegetocareer/back-matter/appendix-glossary-of-literary-terms/", "https://www.britannica.com/art/protagonist"]
+  },
+  {
+    "id": "aphorism",
+    "term": "Aphorism",
+    "category": "Rhetoric and Argument",
+    "definition": "A compact, memorable statement that expresses a general observation, principle, or piece of wisdom.",
+    "spottingTips": ["Look for a self-contained sentence that sounds broadly applicable beyond its scene.", "Notice compression, balance, or contrast that makes the line memorable."],
+    "confusedWith": "Cliché: an aphorism is a concise general insight; a cliché is an expression dulled by overuse.",
+    "examples": [
+      {"text": "A borrowed excuse always comes due.", "explanation": "The decisive clue is a short, portable claim about responsibility stated as general wisdom.", "difficulty": "easy"},
+      {"text": "The easiest door to lock is the one no one questions.", "explanation": "The sentence compresses a general warning about unexamined restrictions into a memorable image.", "difficulty": "medium"},
+      {"text": "Certainty builds tall towers on shallow ground.", "explanation": "The figurative but self-contained statement offers a general principle about overconfidence.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/aphorism", "https://rhetoric.byu.edu/Figures/A/aphorismus.htm"]
+  },
+  {
+    "id": "apostrophe",
+    "term": "Apostrophe",
+    "category": "Figurative Language",
+    "definition": "Direct address to an absent person, a dead person, an abstract idea, or a nonhuman thing as though it could hear and respond.",
+    "spottingTips": ["Look for second-person address to something unable to answer in the scene.", "Separate the addressee from the poem's actual human audience."],
+    "confusedWith": "Personification: personification gives human traits; apostrophe directly speaks to the absent or nonhuman addressee.",
+    "examples": [
+      {"text": "O winter, loosen your grip on the orchard.", "explanation": "The decisive clue is the speaker directly addressing winter as if it could listen.", "difficulty": "easy"},
+      {"text": "Grandmother, you would laugh at the crooked cake I made today.", "explanation": "The speaker addresses an absent or dead grandmother rather than merely describing her.", "difficulty": "medium"},
+      {"text": "Patience, do not abandon me now that the answer is near.", "explanation": "The abstract quality Patience is directly addressed as a possible listener.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.poetryfoundation.org/education/glossary/apostrophe", "https://www.britannica.com/art/apostrophe-literature"]
+  },
+  {
+    "id": "assonance",
+    "term": "Assonance",
+    "category": "Sound and Poetry",
+    "definition": "Repetition of similar vowel sounds in nearby stressed syllables, especially when the surrounding consonants differ.",
+    "spottingTips": ["Read aloud and listen to sounds rather than spelling.", "Focus on repeated vowel sounds inside words, not matching final sound groups."],
+    "confusedWith": "Rhyme: rhyme repeats the vowel and following sounds; assonance can repeat only the vowel sound.",
+    "examples": [
+      {"text": "The pale rain grazed the bay.", "explanation": "The decisive clue is the repeated long-a sound in pale, rain, grazed, and bay.", "difficulty": "easy"},
+      {"text": "Loose roots moved through the cool room.", "explanation": "The repeated oo sound creates assonance despite different consonants.", "difficulty": "medium"},
+      {"text": "A dim wind sifted grit through the chimney.", "explanation": "The short-i sound recurs across dim, wind, sifted, grit, and chimney; spelling varies but sound governs.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-are-assonance-and-consonance", "https://www.poetryfoundation.org/education/glossary/assonance"]
+  },
+  {
+    "id": "blank-verse",
+    "term": "Blank Verse",
+    "category": "Sound and Poetry",
+    "definition": "Unrhymed poetry written mainly in iambic pentameter: lines of about five unstressed-stressed feet.",
+    "spottingTips": ["Check for roughly ten syllables with a da-DUM pulse repeated five times.", "Confirm that line endings do not follow a rhyme scheme."],
+    "confusedWith": "Free verse: blank verse has a regular iambic-pentameter base; free verse has no fixed meter.",
+    "examples": [
+      {"text": "The moon will cross the quiet field tonight.", "explanation": "The decisive clue is an approximately five-beat iambic line without an end-rhyme partner.", "difficulty": "easy"},
+      {"text": "I walk beyond the gate to greet the dawn. / The sparrows wake and scatter from the hedge.", "explanation": "Both lines use an unrhymed five-foot iambic rhythm, the defining blank-verse pattern.", "difficulty": "medium"},
+      {"text": "Perhaps the wind remembers every name; / it moves among the stones but answers none.", "explanation": "The semicolon does not create rhyme; the sustained near-iambic pentameter across unrhymed lines is decisive.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-blank-verse", "https://www.poetryfoundation.org/education/glossary/blank-verse"]
+  },
+  {
+    "id": "cacophony",
+    "term": "Cacophony",
+    "category": "Sound and Poetry",
+    "definition": "A deliberately harsh, jarring, or discordant arrangement of sounds, often using abrupt rhythms and clustered hard consonants.",
+    "spottingTips": ["Read aloud and listen for collisions of stops, hisses, or rough consonant clusters.", "Connect the unpleasant sound texture to the passage's mood or subject."],
+    "confusedWith": "Onomatopoeia: onomatopoeia imitates a particular sound; cacophony creates an overall harsh sonic effect.",
+    "examples": [
+      {"text": "Cracked gears grind, clank, and catch.", "explanation": "The decisive clue is the cluster of hard k, g, and gr sounds producing a jarring texture.", "difficulty": "easy"},
+      {"text": "Brick struck brick; the chute shrieked shut.", "explanation": "Abrupt stresses and repeated hard consonants make the sentence intentionally abrasive.", "difficulty": "medium"},
+      {"text": "Scraps rasped beneath the truck's split axle, skittering sparks across grit.", "explanation": "Dense sk, tr, sp, and gr clusters create sustained discord beyond any single sound word.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-are-euphony-and-cacophony", "https://www.poetryfoundation.org/education/glossary/cacophony"]
+  },
+  {
+    "id": "caesura",
+    "term": "Caesura",
+    "category": "Sound and Poetry",
+    "definition": "A noticeable pause within a line of poetry, created by punctuation, syntax, spacing, or a natural break in speech.",
+    "spottingTips": ["Look inside the line rather than at its ending.", "Read aloud and mark where the voice strongly pauses, often at a dash, period, or semicolon."],
+    "confusedWith": "Enjambment: caesura pauses within a line; enjambment carries syntax across a line break.",
+    "examples": [
+      {"text": "I called your name — the canyon kept it.", "explanation": "The decisive clue is the dash creating a strong pause in the middle of the line.", "difficulty": "easy"},
+      {"text": "The bell is still. We count what silence costs.", "explanation": "A full stop divides the verse line internally, producing a pronounced caesura.", "difficulty": "medium"},
+      {"text": "No answer     only snow entering the tracks.", "explanation": "The deliberate internal space creates the pause even without conventional punctuation.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.poetryfoundation.org/education/glossary/caesura", "https://www.britannica.com/art/caesura-prosody"]
+  },
+  {
+    "id": "catharsis",
+    "term": "Catharsis",
+    "category": "Drama and Narrative",
+    "definition": "The emotional release or clarification an audience experiences after a work intensely arouses feelings such as pity, fear, grief, or tension.",
+    "spottingTips": ["Track emotions built up through the conflict and how the ending releases or transforms them.", "Describe the audience's emotional effect, not merely a character crying or confessing."],
+    "confusedWith": "Climax: the climax is a structural turning point; catharsis is the audience's emotional release, often following it.",
+    "examples": [
+      {"text": "After two hours fearing the trapped miners are dead, the audience hears one faint knock from below and collectively exhales.", "explanation": "The decisive clue is the audience's release of accumulated fear and hope.", "difficulty": "easy"},
+      {"text": "When the proud king finally admits his mistake beside the ruined city, viewers may feel grief sharpen into understanding.", "explanation": "The emotional clarification of pity and loss, rather than the admission alone, is cathartic.", "difficulty": "medium"},
+      {"text": "The final scene offers no rescue, only the sisters speaking the names they had suppressed; the theater's long silence gives way to tears.", "explanation": "The naming releases tension built by repression, producing catharsis without a happy resolution.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/catharsis-criticism", "https://www.britannica.com/art/tragedy-literature"]
+  },
+  {
+    "id": "chiasmus",
+    "term": "Chiasmus",
+    "category": "Rhetoric and Syntax",
+    "definition": "A reversal of grammatical structure or related ideas in successive phrases, forming an AB–BA pattern; the exact words need not repeat.",
+    "spottingTips": ["Label the grammatical or conceptual parts and look for a crossing pattern.", "If identical words reverse, the construction is more specifically antimetabole."],
+    "confusedWith": "Antimetabole: both reverse an AB–BA pattern, but antimetabole repeats the same wording.",
+    "examples": [
+      {"text": "She has all my love; my silence has all of her.", "explanation": "The decisive clue is the crossed possessive structure, though the wording is not simply repeated backward.", "difficulty": "easy"},
+      {"text": "By day the streets belonged to commerce; to dreams belonged the streets by night.", "explanation": "Subject and complement reverse their order across the paired clauses.", "difficulty": "medium"},
+      {"text": "The general entered battle seeking a legend; seeking him, the legend entered battle.", "explanation": "The conceptual and grammatical roles cross in an AB–BA design, while the changed meanings keep it broader than simple word reversal.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://rhetoric.byu.edu/Figures/C/chiasmus.htm", "https://www.britannica.com/art/chiasmus"]
+  },
+  {
+    "id": "cliche",
+    "term": "Cliché",
+    "category": "Language and Style",
+    "definition": "An expression, image, plot device, or idea used so often that it has lost much of its freshness and force.",
+    "spottingTips": ["Ask whether the phrase arrives as a ready-made formula rather than a precise choice.", "Notice familiar story patterns presented without a new angle."],
+    "confusedWith": "Idiom: an idiom has a nonliteral conventional meaning; it is not necessarily stale or overused in context.",
+    "examples": [
+      {"text": "As the interview began, Priya promised to give it one hundred and ten percent.", "explanation": "The decisive clue is the stock motivational phrase whose heavy reuse has weakened its impact.", "difficulty": "easy"},
+      {"text": "The detective was days from retirement when assigned one final case.", "explanation": "The overfamiliar last-case-before-retirement plot setup functions as a narrative cliché.", "difficulty": "medium"},
+      {"text": "Her grief is described only as 'a roller coaster' from the first page to the last.", "explanation": "The conventional emotional metaphor substitutes a familiar formula for specific characterization.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/cliche", "https://utsa.pressbooks.pub/fromcollegetocareer/back-matter/appendix-glossary-of-literary-terms/"]
+  },
+  {
+    "id": "climax",
+    "term": "Climax",
+    "category": "Plot and Structure",
+    "definition": "The plot's point of greatest pressure or decisive turning point, when the central conflict reaches a crisis and the outcome becomes determined.",
+    "spottingTips": ["Find the irreversible decision, confrontation, or discovery near the height of tension.", "Ask which moment changes the direction from building conflict toward consequences."],
+    "confusedWith": "Rising action: rising action increases complications; the climax is the pivotal crisis those complications produce.",
+    "examples": [
+      {"text": "At the bridge, Lena must choose whether to cut the rope and save the town or hold it for her brother.", "explanation": "The decisive clue is the highest-stakes irreversible choice resolving the story's central conflict.", "difficulty": "easy"},
+      {"text": "After gathering evidence for months, the reporter turns on the live microphone and names her own editor.", "explanation": "This confrontation converts mounting investigation into an action that determines what follows.", "difficulty": "medium"},
+      {"text": "The courtroom grows quiet when the accused refuses the pardon because accepting it would validate the false charge.", "explanation": "The refusal is the thematic and structural turning point, even though it is quieter than the preceding arguments.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-climax-literature-definition-examples", "https://www.britannica.com/art/climax-literature"]
+  },
+  {
+    "id": "comic-relief",
+    "term": "Comic Relief",
+    "category": "Drama and Narrative",
+    "definition": "A humorous character, exchange, or episode placed amid serious or tense events to provide a temporary emotional break and often sharpen the surrounding gravity.",
+    "spottingTips": ["Look for humor interrupting, but not permanently changing, a serious situation.", "Notice whether tension returns more strongly after the audience briefly relaxes."],
+    "confusedWith": "Comedy: comic relief is a local pause inside a mainly serious work, not the work's overall genre.",
+    "examples": [
+      {"text": "As the rescue team waits for the cave to shift, Omar discovers that his emergency whistle attracts every goat in the valley.", "explanation": "The goat mishap briefly releases tension inside an otherwise dangerous rescue scene.", "difficulty": "easy"},
+      {"text": "Before the duel, both rivals keep stepping aside for the same oblivious waiter carrying soup.", "explanation": "The awkward interruption supplies temporary humor without removing the duel's threat.", "difficulty": "medium"},
+      {"text": "During the vigil, an uncle's chair squeaks at every solemn pause until even the widow laughs; then the empty chair beside her comes back into view.", "explanation": "The humor offers relief and makes the renewed grief more acute, a characteristic function of comic relief.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/comic-relief", "https://utsa.pressbooks.pub/fromcollegetocareer/back-matter/appendix-glossary-of-literary-terms/"]
+  },
+  {
+    "id": "conceit",
+    "term": "Conceit",
+    "category": "Figurative Language",
+    "definition": "An elaborate, inventive comparison—often surprising or intellectually demanding—developed across several details or lines.",
+    "spottingTips": ["Track a comparison that keeps generating linked correspondences.", "Expect a less obvious pairing than an everyday metaphor and ask how each detail extends it."],
+    "confusedWith": "Extended metaphor: conceit is a particularly ingenious or unconventional extended comparison; usage often overlaps.",
+    "examples": [
+      {"text": "Her apology was a customs office: each word declared, inspected, and taxed before it crossed to me.", "explanation": "The decisive clue is the unusual apology/customs comparison developed through several matching actions.", "difficulty": "easy"},
+      {"text": "The marriage is described as a two-person orchestra: arguments retune strings, silence marks rests, and forgiveness returns the melody.", "explanation": "Multiple musical correspondences sustain an elaborate central comparison.", "difficulty": "medium"},
+      {"text": "Across the poem, memory becomes a night train whose passengers are former selves, whose tickets are scars, and whose destination disappears at dawn.", "explanation": "The surprising comparison is extended through passengers, tickets, and destination, marking a conceit.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.poetryfoundation.org/education/glossary/conceit", "https://www.britannica.com/art/conceit-literature"]
+  },
+  {
+    "id": "conflict-external-vs-internal",
+    "term": "Conflict (external vs. internal)",
+    "category": "Plot and Structure",
+    "definition": "The struggle that drives a narrative: external conflict pits a character against another person, society, nature, technology, or another outside force, while internal conflict occurs among desires, beliefs, fears, or duties within a character.",
+    "spottingTips": ["State what the character wants and what blocks it.", "Ask whether the main opposing pressure comes from outside the character, inside the character, or both."],
+    "confusedWith": "Antagonist: an antagonist is an opposing agent; conflict is the struggle itself and may be internal.",
+    "examples": [
+      {"text": "Rae wants to reach the clinic, but a blizzard erases the road.", "explanation": "The decisive clue is an external nature-versus-character obstacle.", "difficulty": "easy"},
+      {"text": "Invited to expose her dishonest mentor, Rae cannot decide whether loyalty matters more than truth.", "explanation": "The competing values exist within Rae, making this internal conflict.", "difficulty": "medium"},
+      {"text": "A censor threatens to close Rae's newspaper, while her fear of endangering her staff keeps her from publishing the evidence.", "explanation": "The censor supplies external conflict and Rae's divided responsibility supplies internal conflict; both subtypes operate together.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-conflict", "https://utsa.pressbooks.pub/fromcollegetocareer/back-matter/appendix-glossary-of-literary-terms/"]
+  },
+  {
+    "id": "connotation",
+    "term": "Connotation",
+    "category": "Language and Style",
+    "definition": "The feelings, judgments, and cultural associations a word suggests beyond its literal dictionary meaning.",
+    "spottingTips": ["Compare near-synonyms and notice their different emotional coloring.", "Use context and audience to identify positive, negative, or complex associations."],
+    "confusedWith": "Denotation: denotation is the literal referent; connotation is the associated feeling or idea.",
+    "examples": [
+      {"text": "The agent calls the cabin 'secluded'; the stranded guest calls it 'isolated.'", "explanation": "The decisive clue is that similar locations receive positive privacy versus negative loneliness associations.", "difficulty": "easy"},
+      {"text": "Describing the committee as a 'clique' suggests exclusion that the neutral word 'group' would not.", "explanation": "Clique carries a negative social association beyond simply meaning a collection of people.", "difficulty": "medium"},
+      {"text": "The narrator repeatedly calls the old factory a 'nursery' for machines.", "explanation": "Nursery connotes care, infancy, and growth, coloring the factory beyond the word's literal application.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://owl.purdue.edu/owl/general_writing/writing_style/index.html", "https://www.britannica.com/topic/connotation"]
+  },
+  {
+    "id": "consonance",
+    "term": "Consonance",
+    "category": "Sound and Poetry",
+    "definition": "Repetition of consonant sounds in nearby words, especially at the ends or in the middle of words rather than only at their beginnings.",
+    "spottingTips": ["Read aloud and track sound, not spelling.", "Look beyond initial letters; repeated final or internal consonants are common."],
+    "confusedWith": "Alliteration: alliteration usually repeats opening consonant sounds; consonance can occur anywhere in words.",
+    "examples": [
+      {"text": "The black rock struck the dock.", "explanation": "The decisive clue is the repeated final k sound across nearby words.", "difficulty": "easy"},
+      {"text": "A faint wind bent the tent.", "explanation": "Repeated nt sounds at word endings create consonance.", "difficulty": "medium"},
+      {"text": "The lumpy lamp slept in a limp corner.", "explanation": "The recurring l and mp sounds appear in several positions, producing consonance beyond simple initial repetition.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-are-assonance-and-consonance", "https://www.poetryfoundation.org/education/glossary/consonance"]
+  },
+  {
+    "id": "couplet",
+    "term": "Couplet",
+    "category": "Poetic Form",
+    "definition": "Two consecutive lines of verse treated as a unit, often sharing meter and rhyme but not required to do so.",
+    "spottingTips": ["Look for a two-line grouping or a paired set within a larger stanza.", "Check whether rhyme, syntax, or thought links the two lines as one unit."],
+    "confusedWith": "Stanza: a stanza may contain any number of lines; a couplet specifically contains two.",
+    "examples": [
+      {"text": "The kettle sings; the windows steam. / Morning gathers from a dream.", "explanation": "The decisive clue is two consecutive rhyming lines forming a complete unit.", "difficulty": "easy"},
+      {"text": "No star appeared above the hill. / We crossed the dark together still.", "explanation": "The two linked lines form a closed couplet through rhyme and completed thought.", "difficulty": "medium"},
+      {"text": "I kept the key you never knew. / The door stayed open after you.", "explanation": "Within a longer poem, these paired, metrically similar lines operate as a couplet.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.poetryfoundation.org/education/glossary/couplet", "https://www.britannica.com/art/couplet"]
+  },
+  {
+    "id": "denotation",
+    "term": "Denotation",
+    "category": "Language and Style",
+    "definition": "A word's direct, literal, dictionary-level meaning, apart from the emotions or associations it may carry.",
+    "spottingTips": ["State the basic referent that would appear in a dictionary definition.", "Separate what the word identifies from how it makes readers feel."],
+    "confusedWith": "Connotation: denotation is literal meaning; connotation is the attached emotional or cultural coloring.",
+    "examples": [
+      {"text": "In 'A snake crossed the path,' snake denotes a legless reptile.", "explanation": "The decisive clue is the word's literal referent, not its possible association with betrayal.", "difficulty": "easy"},
+      {"text": "Calling the room 'compact' denotes that it occupies little space.", "explanation": "The core meaning is small size; any favorable suggestion of efficiency is connotation.", "difficulty": "medium"},
+      {"text": "The poem uses 'winter' to denote the season even while it connotes age and decline.", "explanation": "The calendar season is the literal denotation, distinguished from its figurative associations.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://owl.purdue.edu/owl/general_writing/writing_style/index.html", "https://www.britannica.com/topic/denotation"]
+  },
+  {
+    "id": "deus-ex-machina",
+    "term": "Deus Ex Machina",
+    "category": "Plot and Structure",
+    "definition": "An unlikely, insufficiently prepared person, power, or event introduced late to solve a seemingly impossible plot problem.",
+    "spottingTips": ["Look for a rescue or solution that arrives from outside the established chain of cause and effect.", "Ask whether earlier details meaningfully prepared readers for the solution."],
+    "confusedWith": "Plot twist: a twist may be surprising but follows planted evidence; deus ex machina feels externally imposed and unearned.",
+    "examples": [
+      {"text": "Cornered by wolves, the hikers are saved when an unexplained helicopter lands in the clearing.", "explanation": "The decisive clue is an unprepared outside rescue that instantly removes the danger.", "difficulty": "easy"},
+      {"text": "On the final page, a stranger announces that the bankrupt family owns a forgotten diamond mine.", "explanation": "The late, unsupported inheritance-like revelation solves the financial conflict without arising from prior action.", "difficulty": "medium"},
+      {"text": "Just before sentencing, a new law takes effect and erases the hero's crime, though legislation was never part of the story.", "explanation": "An external legal change appears solely to resolve the crisis, with no narrative preparation.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-deus-ex-machina", "https://www.britannica.com/art/deus-ex-machina"]
+  },
+  {
+    "id": "dramatic-irony",
+    "term": "Dramatic Irony",
+    "category": "Narrative and Meaning",
+    "definition": "A gap in knowledge where the audience understands an important fact, danger, identity, or outcome that one or more characters do not.",
+    "spottingTips": ["List what the audience knows and what the character believes.", "Watch for words or actions that acquire a second meaning because of that knowledge gap."],
+    "confusedWith": "Situational irony: dramatic irony depends on unequal knowledge; situational irony depends on an unexpected outcome.",
+    "examples": [
+      {"text": "Viewers see the spare key fall into the fountain, but Eli tells everyone it is safe in his pocket.", "explanation": "The decisive clue is that the audience knows a fact Eli does not.", "difficulty": "easy"},
+      {"text": "The disguised heir praises the guard's loyalty while the guard boasts that he would arrest the heir on sight.", "explanation": "Readers recognize the heir's identity, so the guard's confident statement carries an unintended second meaning.", "difficulty": "medium"},
+      {"text": "Because the narration revealed the bridge's cracked support earlier, the engineer's toast 'to solid foundations' produces dread.", "explanation": "Audience knowledge makes an innocent phrase ominous while the speaking character remains unaware.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-irony", "https://www.poetryfoundation.org/education/glossary/irony"]
+  },
+  {
+    "id": "dynamic-character-vs-static",
+    "term": "Dynamic Character (vs static)",
+    "category": "Character",
+    "definition": "A dynamic character undergoes a meaningful change in outlook, values, or behavior through the story; a static character remains fundamentally the same despite events.",
+    "spottingTips": ["Compare the character's choices and beliefs near the beginning and end.", "Distinguish deep change from a temporary mood, new fact, or physical change."],
+    "confusedWith": "Round character: round describes complexity; dynamic describes change. A complex character can remain static.",
+    "examples": [
+      {"text": "At first Jo refuses every favor; after surviving the storm through neighbors' help, she organizes the town's mutual-aid pantry.", "explanation": "The decisive clue is a lasting shift from rejecting dependence to practicing cooperation, making Jo dynamic.", "difficulty": "easy"},
+      {"text": "Despite losing office and friends, the mayor ends by making the same excuses he used in chapter one.", "explanation": "The repeated outlook under changed circumstances marks the mayor as static.", "difficulty": "medium"},
+      {"text": "Inez still dislikes crowds, but she moves from silently resenting them to publicly defending others' right to assemble.", "explanation": "Her personality trait persists while her values and behavior meaningfully change, so she is dynamic rather than merely inconsistent.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://openoregon.pressbooks.pub/fictiontextbook/chapter/character/", "https://utsa.pressbooks.pub/fromcollegetocareer/back-matter/appendix-glossary-of-literary-terms/"]
+  },
+  {
+    "id": "direct-characterization-vs-indirect",
+    "term": "Direct Characterization (vs indirect)",
+    "category": "Character",
+    "definition": "Direct characterization explicitly tells readers a character's qualities; indirect characterization lets readers infer qualities from actions, speech, thoughts, appearance, and others' responses.",
+    "spottingTips": ["For direct characterization, underline the stated trait.", "For indirect characterization, cite behavior or dialogue and name the trait it suggests."],
+    "confusedWith": "Description: physical description becomes characterization only when it states or implies something meaningful about the person.",
+    "examples": [
+      {"text": "Mr. Vale was patient with beginners and suspicious of praise.", "explanation": "The narrator directly names two character traits.", "difficulty": "easy"},
+      {"text": "Before eating, Mr. Vale divided his sandwich into four pieces and quietly placed three beside the hungry students.", "explanation": "The action indirectly suggests generosity; readers infer the trait rather than being told it.", "difficulty": "medium"},
+      {"text": "The narrator calls Suri 'fearless,' yet Suri checks every exit and lets her friend enter first.", "explanation": "The stated label is direct characterization, while the behavior indirectly complicates it by suggesting anxiety or caution.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-characterization-literature-definition-and-examples", "https://openoregon.pressbooks.pub/fictiontextbook/chapter/character/"]
+  },
+  {
+    "id": "elegy",
+    "term": "Elegy",
+    "category": "Poetic Form",
+    "definition": "A poem of mourning or serious reflection on death, loss, or absence, often moving from grief toward consolation or understanding.",
+    "spottingTips": ["Identify the person, place, era, or possibility being mourned.", "Look for a reflective movement through lament, praise, memory, or consolation."],
+    "confusedWith": "Eulogy: a eulogy is a speech praising the dead; an elegy is a poem of mourning or loss.",
+    "examples": [
+      {"text": "Your boots wait by the door, collecting / the dust you will not track inside.", "explanation": "The decisive clue is poetic mourning focused on the everyday absence of someone who has died.", "difficulty": "easy"},
+      {"text": "A poem addresses the final neighborhood tree, recalls the shade it gave, and ends by planting its seeds.", "explanation": "The poem laments a loss and moves toward consolation through renewal.", "difficulty": "medium"},
+      {"text": "The speaker mourns a vanished language by listing words no child can answer, then hears one survive in a lullaby.", "explanation": "The object of elegiac grief is cultural loss rather than an individual death, with a modest turn toward continuity.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-elegy-definition-and-examples", "https://www.poetryfoundation.org/education/glossary/elegy"]
+  },
+  {
+    "id": "enjambment",
+    "term": "Enjambment",
+    "category": "Sound and Poetry",
+    "definition": "Continuation of a grammatical phrase or sentence beyond the end of one verse line into the next without a strong stopping pause.",
+    "spottingTips": ["At the line break, ask whether syntax and sense require you to keep reading.", "Look for a break that creates suspense, double meaning, speed, or emphasis on the next word."],
+    "confusedWith": "End-stopping: an end-stopped line completes its phrase or sentence at the line break.",
+    "examples": [
+      {"text": "She carried the storm / inside her coat.", "explanation": "The decisive clue is that the grammatical phrase continues across the first line break.", "difficulty": "easy"},
+      {"text": "I promised I would never / forget the road home.", "explanation": "The line ends without syntactic completion and pulls the reader into 'forget.'", "difficulty": "medium"},
+      {"text": "We watched the last train become / a rumor under snow.", "explanation": "The break temporarily makes 'become' feel incomplete, then the next line transforms the train figuratively.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-enjambment", "https://www.poetryfoundation.org/education/glossary/enjambment"]
+  },
+  {
+    "id": "epiphany",
+    "term": "Epiphany",
+    "category": "Narrative and Meaning",
+    "definition": "A sudden moment of insight in which a character or speaker recognizes a significant truth about self, others, or the world.",
+    "spottingTips": ["Locate a small event or image that triggers a large shift in understanding.", "Check whether later thought or action reflects the new recognition."],
+    "confusedWith": "Plot twist: a twist reveals new plot information to the audience; an epiphany is a character's illuminating realization.",
+    "examples": [
+      {"text": "Seeing his untouched birthday cards stacked in a drawer, Amir realizes that apologies sent without change are only paper.", "explanation": "The decisive clue is Amir's sudden self-understanding triggered by an ordinary object.", "difficulty": "easy"},
+      {"text": "When the rival quietly repairs her bicycle, Nia understands that she has mistaken competition for hatred.", "explanation": "A specific action produces a sharp revision of Nia's view of another person.", "difficulty": "medium"},
+      {"text": "At the empty victory parade, the general hears his own medals clicking and recognizes them as a count of absences.", "explanation": "The sensory moment triggers a profound new interpretation of his supposed success.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/epiphany-literary-device", "https://utsa.pressbooks.pub/fromcollegetocareer/back-matter/appendix-glossary-of-literary-terms/"]
+  },
+  {
+    "id": "epithet",
+    "term": "Epithet",
+    "category": "Language and Style",
+    "definition": "A descriptive word or phrase regularly attached to a person, place, or thing to highlight a defining or attributed quality.",
+    "spottingTips": ["Look for a compact descriptive label used with or instead of a name.", "Ask which trait the label fixes in the audience's mind."],
+    "confusedWith": "Nickname: a nickname may simply identify informally; an epithet pointedly characterizes.",
+    "examples": [
+      {"text": "Mara the Unshaken entered the council chamber.", "explanation": "The decisive clue is the attached label 'the Unshaken,' which emphasizes a defining trait.", "difficulty": "easy"},
+      {"text": "The fishermen call the northern headland 'the Tooth of Winter.'", "explanation": "The descriptive substitute name characterizes the place as sharp and dangerous.", "difficulty": "medium"},
+      {"text": "Whenever the narrator mentions the accountant, he becomes 'our careful collector of crumbs.'", "explanation": "The recurring phrase acts as an ironic epithet, attaching a judgment to the character.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/epithet", "https://www.poetryfoundation.org/education/glossary/epithet"]
+  },
+  {
+    "id": "epistrophe",
+    "term": "Epistrophe",
+    "category": "Rhetoric and Syntax",
+    "definition": "Repetition of the same word or phrase at the ends of successive clauses, sentences, or verse lines.",
+    "spottingTips": ["Compare the endings of neighboring grammatical units.", "Distinguish deliberate end-position repetition from a word that merely appears several times."],
+    "confusedWith": "Anaphora: epistrophe repeats endings; anaphora repeats beginnings.",
+    "examples": [
+      {"text": "They asked for justice, marched for justice, and waited for justice.", "explanation": "The decisive clue is 'for justice' repeated at the ends of three coordinated units.", "difficulty": "easy"},
+      {"text": "When the lights failed, we sang together; when the doors locked, we stood together.", "explanation": "The repeated terminal 'together' creates epistrophe across clauses.", "difficulty": "medium"},
+      {"text": "The river erased the border at night, the wind questioned the border at night, our footsteps crossed the border at night.", "explanation": "The same phrase closes successive clauses, making its end position decisive.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-epistrophe", "https://rhetoric.byu.edu/Figures/E/epistrophe.htm"]
+  },
+  {
+    "id": "euphemism",
+    "term": "Euphemism",
+    "category": "Language and Style",
+    "definition": "A mild, indirect, or softened expression substituted for one considered blunt, painful, offensive, or alarming.",
+    "spottingTips": ["Translate the phrase into the more direct reality it avoids naming.", "Notice whether politeness, discomfort, concealment, or manipulation motivates the substitution."],
+    "confusedWith": "Understatement: understatement reduces degree; euphemism replaces a sensitive term with a gentler one.",
+    "examples": [
+      {"text": "The company said fifty workers were 'let go.'", "explanation": "The decisive clue is the softened phrase replacing the blunt word 'fired.'", "difficulty": "easy"},
+      {"text": "Her uncle 'passed away' before the harvest.", "explanation": "The conventional mild expression substitutes for 'died.'", "difficulty": "medium"},
+      {"text": "The report calls the civilian deaths 'unintended outcomes.'", "explanation": "The abstract substitute masks a disturbing concrete reality, revealing euphemism's potentially manipulative use.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/euphemism", "https://rhetoric.byu.edu/Figures/E/euphemismus.htm"]
+  },
+  {
+    "id": "euphony",
+    "term": "Euphony",
+    "category": "Sound and Poetry",
+    "definition": "A smooth, harmonious, or pleasing arrangement of sounds, often created through flowing rhythm, open vowels, and liquid or soft consonants.",
+    "spottingTips": ["Read aloud and listen for ease, continuity, and musical smoothness.", "Connect sound choices with a calm, beautiful, tender, or otherwise harmonious effect."],
+    "confusedWith": "Assonance: assonance repeats vowel sounds; euphony is the broader pleasing effect that may use assonance and other devices.",
+    "examples": [
+      {"text": "Low willows lean over the luminous lake.", "explanation": "The decisive clue is the flowing l sounds and long vowels creating a mellifluous effect.", "difficulty": "easy"},
+      {"text": "A murmuring river wandered under evening leaves.", "explanation": "Soft m, r, v, and liquid sounds blend into an intentionally pleasing sound texture.", "difficulty": "medium"},
+      {"text": "Oceans of amber open slowly into morning.", "explanation": "Open vowels, nasals, and gentle rhythm create overall harmony rather than merely one repeated phoneme.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-are-euphony-and-cacophony", "https://www.poetryfoundation.org/education/glossary/euphony"]
+  },
+  {
+    "id": "falling-action",
+    "term": "Falling Action",
+    "category": "Plot and Structure",
+    "definition": "The sequence after the climax that shows the turning point's consequences, reduces major tension, and moves the story toward resolution.",
+    "spottingTips": ["Identify the climax first, then trace the immediate results that follow it.", "Look for loose ends being addressed while the central struggle is no longer building."],
+    "confusedWith": "Resolution: falling action is the aftermath leading toward closure; resolution is the final settled state or conclusion.",
+    "examples": [
+      {"text": "After Mira defeats the arsonist, firefighters contain the last flames and families begin returning home.", "explanation": "The decisive clue is that these consequences occur after the central confrontation and lower the tension.", "difficulty": "easy"},
+      {"text": "Once the jury announces its verdict, the witness apologizes, the lawyers pack their files, and the defendant calls her son.", "explanation": "The verdict is the turning point; the subsequent reactions form falling action.", "difficulty": "medium"},
+      {"text": "Following the queen's refusal of the crown, rival banners come down and the council debates how to govern without her.", "explanation": "The scene works through consequences of the climactic refusal before the new order is fully resolved.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-plot-definition-and-examples", "https://openoregon.pressbooks.pub/fictiontextbook/chapter/plot/"]
+  },
+  {
+    "id": "figurative-language",
+    "term": "Figurative Language",
+    "category": "Figurative Language",
+    "definition": "Language used beyond a strictly literal meaning to create comparison, emphasis, sensory effect, or an imaginative association; it includes devices such as metaphor, simile, personification, and hyperbole.",
+    "spottingTips": ["Test whether a literal reading is impossible, incomplete, or less meaningful in context.", "Name the particular relationship or device doing the figurative work."],
+    "confusedWith": "Imagery: imagery appeals to the senses and can be literal; figurative language departs from literal meaning.",
+    "examples": [
+      {"text": "By noon, the classroom was an oven.", "explanation": "The decisive clue is the nonliteral identification of the hot classroom as an oven, a metaphor.", "difficulty": "easy"},
+      {"text": "The deadline crept closer while my inbox screamed.", "explanation": "Deadlines cannot creep and inboxes cannot scream literally; personification creates urgency.", "difficulty": "medium"},
+      {"text": "His promise weighed less than the breath that carried it.", "explanation": "The sentence assigns physical weight to trustworthiness, using an impossible literal comparison to express unreliability.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-figurative-language", "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/index.html"]
+  },
+  {
+    "id": "flat-character-vs-round",
+    "term": "Flat Character (vs round)",
+    "category": "Character",
+    "definition": "A flat character is built around one or a few clear traits and has limited complexity; a round character displays layered, sometimes conflicting traits that create a fuller sense of personhood.",
+    "spottingTips": ["Count how many meaningful, interacting traits the text develops.", "Do not equate flat with unimportant or round with likable; the distinction concerns complexity."],
+    "confusedWith": "Static character: flat/round concerns complexity, while static/dynamic concerns whether a character changes.",
+    "examples": [
+      {"text": "Every time the hero enters the shop, the clerk complains about money and contributes no other trait or motive.", "explanation": "The decisive clue is the clerk's single repeated characteristic, making the character flat.", "difficulty": "easy"},
+      {"text": "The severe coach secretly fears conflict, writes tender letters to her sister, and cheats to protect a struggling player.", "explanation": "The several contradictory traits and motives make the coach round.", "difficulty": "medium"},
+      {"text": "A cheerful messenger appears briefly but notices every locked window; the detail hints at history without developing it further.", "explanation": "One suggestive detail does not by itself create sustained complexity, so the minor character remains relatively flat.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-flat-character-vs-round-character", "https://openoregon.pressbooks.pub/fictiontextbook/chapter/character/"]
+  },
+  {
+    "id": "flashback",
+    "term": "Flashback",
+    "category": "Plot and Structure",
+    "definition": "A scene or narrated passage that interrupts the present story to depict an event from an earlier time.",
+    "spottingTips": ["Establish the narrative's current time, then note a temporary move backward.", "Look for transitions prompted by memory, an object, dialogue, dreams, or direct time markers."],
+    "confusedWith": "Backstory: backstory is prior information; a flashback stages or narrates a deliberate return to an earlier event.",
+    "examples": [
+      {"text": "When Ana smells woodsmoke, the story returns to the night her childhood home burned.", "explanation": "The decisive clue is the narrative leaving the present to portray an earlier event.", "difficulty": "easy"},
+      {"text": "At the wedding, the groom touches an empty chair; three pages then recreate his last breakfast with his father.", "explanation": "A present trigger introduces an extended scene from the past before the wedding narrative resumes.", "difficulty": "medium"},
+      {"text": "The chapter opens with the prison gate closing, then shifts to 'Seven winters before' to show the bargain that eventually led there.", "explanation": "The explicit backward time shift interrupts the current plot and supplies causal context.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-flashback", "https://openoregon.pressbooks.pub/fictiontextbook/chapter/plot/"]
+  },
+  {
+    "id": "foil",
+    "term": "Foil",
+    "category": "Character",
+    "definition": "A character whose contrasting or parallel traits make important qualities of another character easier to see.",
+    "spottingTips": ["Compare the characters under similar pressure or facing similar choices.", "Explain what the contrast reveals about the focal character, not only how the two differ."],
+    "confusedWith": "Antagonist: a foil reveals through contrast and need not oppose the protagonist's goal.",
+    "examples": [
+      {"text": "While cautious Ben studies every map, his sister launches the boat before checking the weather.", "explanation": "Her impulsiveness highlights Ben's caution through direct contrast.", "difficulty": "easy"},
+      {"text": "Two judges value fairness, but one follows every rule while the other breaks rules to correct unequal outcomes.", "explanation": "Their parallel goal and contrasting methods illuminate each judge's idea of justice.", "difficulty": "medium"},
+      {"text": "The hero's quiet friend never challenges him, yet her steady apologies make his refusal to admit fault increasingly visible.", "explanation": "The friend functions as a subtle foil through contrasting accountability, despite causing no plot opposition.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-foil-oregon-state-guide-literary-terms", "https://openoregon.pressbooks.pub/fictiontextbook/chapter/character/"]
+  },
+  {
+    "id": "foreshadowing",
+    "term": "Foreshadowing",
+    "category": "Plot and Structure",
+    "definition": "An early detail, image, statement, or event that hints at and prepares readers for a later development.",
+    "spottingTips": ["After a later event, look back for earlier details that gain new relevance.", "Distinguish a purposeful pattern from a clue so obvious that it simply announces the outcome."],
+    "confusedWith": "Flashback: foreshadowing points forward; flashback moves the narrative backward.",
+    "examples": [
+      {"text": "Before the voyage, the captain notices that every compass needle trembles near the cargo hold.", "explanation": "The decisive clue is an early abnormal detail that prepares for later trouble involving the cargo.", "difficulty": "easy"},
+      {"text": "A child practicing knots says, 'This one holds only until it gets wet.' Later, the family crosses a flooded rope bridge.", "explanation": "The earlier instruction hints at the bridge's later danger.", "difficulty": "medium"},
+      {"text": "Throughout the opening chapter, doors close a moment before Sela reaches them; in the ending, she learns the house has been choosing her route.", "explanation": "The repeated minor pattern quietly prepares for the later revelation of the house's agency.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-foreshadowing", "https://openoregon.pressbooks.pub/fictiontextbook/chapter/plot/"]
+  },
+  {
+    "id": "hyperbole",
+    "term": "Hyperbole",
+    "category": "Figurative Language",
+    "definition": "Intentional exaggeration beyond literal possibility or reasonable scale, used for emphasis, humor, intensity, or emotional truth.",
+    "spottingTips": ["Test whether the claim can literally be true in context.", "Identify the feeling or judgment amplified by the exaggeration."],
+    "confusedWith": "Lying: hyperbole signals exaggeration for effect rather than intending literal deception.",
+    "examples": [
+      {"text": "I have waited a thousand years for this bus.", "explanation": "The decisive clue is the impossible time span exaggerating impatience.", "difficulty": "easy"},
+      {"text": "Her backpack contained enough homework to sink the ferry.", "explanation": "The excessive weight is not literal; it amplifies how burdensome the work feels.", "difficulty": "medium"},
+      {"text": "At his whisper, every secret in the city leaned closer.", "explanation": "The citywide response is impossible and exaggerates the whisper's intrigue and reach.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-hyperbole", "https://www.poetryfoundation.org/education/glossary/hyperbole"]
+  },
+  {
+    "id": "imagery",
+    "term": "Imagery",
+    "category": "Language and Style",
+    "definition": "Concrete descriptive language that appeals to sight, sound, smell, taste, touch, movement, or bodily sensation to create a sensory experience.",
+    "spottingTips": ["Underline words tied to specific senses.", "Explain how the sensory pattern contributes to mood, character, or meaning rather than only listing details."],
+    "confusedWith": "Figurative language: imagery may be entirely literal; figurative language depends on nonliteral meaning.",
+    "examples": [
+      {"text": "Hot sand needled her heels while salt dried on her lips.", "explanation": "The decisive clue is specific tactile and taste imagery.", "difficulty": "easy"},
+      {"text": "From the kitchen came the hiss of onions and the sharp sweetness of oranges.", "explanation": "Sound and smell details create a vivid sensory scene.", "difficulty": "medium"},
+      {"text": "The elevator dropped; his stomach rose cold beneath his ribs as the numbers blurred red.", "explanation": "Kinesthetic, internal bodily, temperature, and visual sensations combine to embody fear.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-imagery-oregon-state-guide-literary-terms", "https://www.poetryfoundation.org/education/glossary/imagery"]
+  },
+  {
+    "id": "internal-rhyme",
+    "term": "Internal Rhyme",
+    "category": "Sound and Poetry",
+    "definition": "Rhyme involving words within the same verse line, or a word inside one line rhyming with another line's interior or ending word.",
+    "spottingTips": ["Scan inside lines instead of checking only line endings.", "Listen for matching stressed vowel and following sounds."],
+    "confusedWith": "End rhyme: end rhyme occurs at line endings; internal rhyme places at least one rhyming word inside a line.",
+    "examples": [
+      {"text": "The bright kite climbed out of sight.", "explanation": "The decisive clue is bright and kite rhyming within the line, with sight extending the pattern.", "difficulty": "easy"},
+      {"text": "I heard the rain complain on the roof.", "explanation": "Rain and complain form a rhyme inside the single line.", "difficulty": "medium"},
+      {"text": "We row through snow as the shoreline thins.", "explanation": "Row and snow rhyme within the line even though the ending word 'thins' does not participate.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.poetryfoundation.org/education/glossary/rhyme", "https://www.britannica.com/art/rhyme"]
+  },
+  {
+    "id": "inversion",
+    "term": "Inversion",
+    "category": "Rhetoric and Syntax",
+    "definition": "A departure from ordinary word order, often placing a verb, complement, or modifier before the subject to create emphasis, rhythm, rhyme, or a formal voice.",
+    "spottingTips": ["Restate the sentence in everyday subject-verb-object order.", "Ask which displaced element receives emphasis or satisfies a sound pattern."],
+    "confusedWith": "Anastrophe: the terms overlap; inversion is the broader label for reversed normal syntax.",
+    "examples": [
+      {"text": "Gone are the ships from the harbor.", "explanation": "The decisive clue is 'Gone' and the verb appearing before the subject 'the ships.'", "difficulty": "easy"},
+      {"text": "Never had the town heard such a bell.", "explanation": "The negative adverb triggers auxiliary-before-subject order rather than ordinary declarative syntax.", "difficulty": "medium"},
+      {"text": "Beyond the orchard waits what none of us will name.", "explanation": "A place phrase and verb precede the delayed subject, using inversion for suspense.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://rhetoric.byu.edu/Figures/A/anastrophe.htm", "https://www.poetryfoundation.org/education/glossary/syntax"]
+  },
+  {
+    "id": "irony-verbal-situational-dramatic",
+    "term": "Irony (verbal, situational, dramatic)",
+    "category": "Narrative and Meaning",
+    "definition": "A meaningful gap between appearance and reality: verbal irony says one thing while meaning another; situational irony produces an outcome sharply contrary to reasonable expectation; dramatic irony lets the audience know something a character does not.",
+    "spottingTips": ["Name the two levels in tension: words/meaning, expectation/outcome, or audience/character knowledge.", "Use context to show why the contrast is meaningful rather than merely unfortunate or surprising."],
+    "confusedWith": "Sarcasm: sarcasm is a cutting use of verbal irony; irony also includes nonverbal forms and need not mock.",
+    "examples": [
+      {"text": "As hail shatters the greenhouse roof, the gardener says, 'Perfect weather for seedlings.'", "explanation": "The decisive clue is verbal irony: the literal praise contradicts the speaker's intended criticism.", "difficulty": "easy"},
+      {"text": "A locksmith installs ten new locks, then traps herself outside because she left every key indoors.", "explanation": "The security expert's attempt to prevent exclusion causes her own exclusion, a situationally ironic reversal.", "difficulty": "medium"},
+      {"text": "Readers know the peace treaty is forged, but the ambassador celebrates it and dismisses the cautious messenger as paranoid.", "explanation": "The audience-character knowledge gap creates dramatic irony and makes the celebration ominous.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-irony", "https://www.poetryfoundation.org/education/glossary/irony"]
+  },
+  {
+    "id": "juxtaposition",
+    "term": "Juxtaposition",
+    "category": "Language and Style",
+    "definition": "Placement of two elements close together so their contrast, similarity, or surprising relationship becomes more noticeable and meaningful.",
+    "spottingTips": ["Identify the neighboring images, characters, scenes, or ideas being compared.", "Explain what becomes visible only because of their placement together."],
+    "confusedWith": "Antithesis: juxtaposition is any meaningful side-by-side placement; antithesis uses balanced verbal opposition.",
+    "examples": [
+      {"text": "A luxury tower casts its evening shadow across the crowded shelter.", "explanation": "The decisive clue is the close visual placement of wealth and poverty.", "difficulty": "easy"},
+      {"text": "The chapter alternates a child's birthday preparations with soldiers preparing a checkpoint.", "explanation": "Side-by-side scenes make innocence and threat illuminate each other.", "difficulty": "medium"},
+      {"text": "Beside the museum label 'Permanent Collection,' a custodian replaces a cracked display case.", "explanation": "The nearby claim of permanence and evidence of decay create a subtle meaningful contrast.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-juxtaposition", "https://www.poetryfoundation.org/education/glossary/juxtaposition"]
+  },
+  {
+    "id": "litotes",
+    "term": "Litotes",
+    "category": "Figurative Language",
+    "definition": "Understatement that affirms a quality by negating its opposite, often producing restrained emphasis or irony.",
+    "spottingTips": ["Look for 'not' plus an opposing adjective or phrase.", "Translate the double-negative logic into the positive meaning it implies."],
+    "confusedWith": "Understatement: all litotes understates, but litotes specifically uses negation of the contrary.",
+    "examples": [
+      {"text": "Winning the scholarship was no small achievement.", "explanation": "The decisive clue is praise expressed by negating 'small,' meaning the achievement was substantial.", "difficulty": "easy"},
+      {"text": "After rebuilding the bridge alone, she admitted the week had not been easy.", "explanation": "Negating 'easy' produces restrained emphasis on extreme difficulty.", "difficulty": "medium"},
+      {"text": "The witness's memory was not entirely useless; it overturned the verdict.", "explanation": "The negated negative 'not entirely useless' implies strong usefulness while deliberately understating it.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://rhetoric.byu.edu/Figures/L/litotes.htm", "https://utsa.pressbooks.pub/fromcollegetocareer/back-matter/appendix-glossary-of-literary-terms/"]
+  },
+  {
+    "id": "lyric-poem",
+    "term": "Lyric (poem)",
+    "category": "Poetic Form",
+    "definition": "A usually brief poem centered on a speaker's perception, emotion, or meditation rather than on telling an extended sequence of events.",
+    "spottingTips": ["Focus on the speaker's inner response or concentrated moment.", "Check that reflection and musical language matter more than a developed plot."],
+    "confusedWith": "Narrative poem: a lyric emphasizes voice and feeling; a narrative poem primarily tells a story.",
+    "examples": [
+      {"text": "At the bus stop, the speaker studies one melting snowflake and wonders why goodbyes feel warm only afterward.", "explanation": "The decisive clue is concentrated personal reflection in a single moment rather than an unfolding plot.", "difficulty": "easy"},
+      {"text": "A twelve-line poem addresses the speaker's own restless hands during the hour before dawn.", "explanation": "Its brief inward meditation and expressive voice mark it as lyric.", "difficulty": "medium"},
+      {"text": "The poem mentions a voyage only through fragments—salt, a torn ticket, a remembered gull—while dwelling on homesickness.", "explanation": "Events remain secondary to the speaker's emotional state, distinguishing lyric from narrative poetry.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.poetryfoundation.org/education/glossary/lyric", "https://www.britannica.com/art/lyric"]
+  },
+  {
+    "id": "metaphor-implied-extended-dead-mixed",
+    "term": "Metaphor (implied, extended, dead, mixed)",
+    "category": "Figurative Language",
+    "definition": "A nonliteral identification that understands one thing through another. An implied metaphor omits one named side; an extended metaphor develops the comparison; a dead metaphor has become conventional enough to feel literal; a mixed metaphor combines incompatible comparisons.",
+    "spottingTips": ["Name the subject, the comparison source, and the shared quality—even if one side is only implied.", "Track duration and freshness: one hint, a sustained system, an unnoticed convention, or clashing systems."],
+    "confusedWith": "Simile: a simile explicitly compares with 'like' or 'as'; a metaphor identifies or transfers qualities without that signal.",
+    "examples": [
+      {"text": "The prosecutor pounced, then cornered the witness with three quick questions.", "explanation": "The decisive clue is an implied predator metaphor: no animal is named, but pounced and cornered transfer its behavior.", "difficulty": "easy"},
+      {"text": "Across the speech, the nation is a garden: laws are trellises, schools are soil, and citizens cultivate the harvest.", "explanation": "The garden identification continues through several linked details, making it extended.", "difficulty": "medium"},
+      {"text": "At the foot of the page, he tried to steer the argument back onto its rails before the idea evaporated.", "explanation": "'Foot of the page' is a conventional or dead metaphor, while steering onto rails and then evaporating mixes vehicle, train, and vapor systems incompatibly.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-metaphor", "https://www.britannica.com/art/metaphor"]
+  },
+  {
+    "id": "metonymy",
+    "term": "Metonymy",
+    "category": "Figurative Language",
+    "definition": "Substitution of the name of something closely associated with a thing for the thing itself, such as a place for an institution or an object for an activity.",
+    "spottingTips": ["Identify what the named item is associated with in context.", "Confirm a relationship of connection, not a part-whole relationship or a comparison."],
+    "confusedWith": "Synecdoche: synecdoche substitutes part for whole or whole for part; metonymy uses any close association.",
+    "examples": [
+      {"text": "The crown rejected the petition.", "explanation": "The decisive clue is 'crown' standing by association for the monarch or royal government.", "difficulty": "easy"},
+      {"text": "The newsroom has not decided which candidate to endorse.", "explanation": "The place stands for the editors and institution working there.", "difficulty": "medium"},
+      {"text": "After years before the bench, she no longer trusted the ballot.", "explanation": "Bench stands for judicial service and ballot for electoral politics through association, not literal parts of those systems.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-metonymy", "https://www.britannica.com/art/metonymy"]
+  },
+  {
+    "id": "mood",
+    "term": "Mood",
+    "category": "Language and Style",
+    "definition": "The emotional atmosphere a text creates for readers through setting, imagery, pacing, sound, and other choices.",
+    "spottingTips": ["Name the feeling produced in the reader and cite multiple textual details that create it.", "Use precise atmosphere words such as foreboding, wistful, claustrophobic, or serene."],
+    "confusedWith": "Tone: mood is the audience's atmosphere; tone is the speaker's or author's attitude toward a subject.",
+    "examples": [
+      {"text": "Fog seals the street, one lamp flickers, and footsteps stop whenever Niko stops.", "explanation": "The decisive clue is the combined setting and sound pattern creating a suspenseful mood for readers.", "difficulty": "easy"},
+      {"text": "Warm bread scents the small kitchen while rain ticks softly against the glass.", "explanation": "Sensory details create a cozy, sheltered mood.", "difficulty": "medium"},
+      {"text": "The playground is freshly painted, but every swing moves in wind that the trees do not feel.", "explanation": "The mismatch between cheerful appearance and unexplained motion creates an uncanny mood.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-difference-between-mood-and-tone-definitions-and-examples", "https://openoregon.pressbooks.pub/fictiontextbook/chapter/setting/"]
+  },
+  {
+    "id": "motif",
+    "term": "Motif",
+    "category": "Narrative and Meaning",
+    "definition": "A recurring image, phrase, object, situation, sound, or idea whose repetition develops a pattern that supports a work's larger themes.",
+    "spottingTips": ["Track repetition with variation across different scenes.", "Explain how the repeated element contributes to a larger idea rather than assigning it one fixed meaning."],
+    "confusedWith": "Symbol: a symbol carries meaning; a motif is defined by recurrence and may include several related symbols.",
+    "examples": [
+      {"text": "At every major decision, the novel mentions a clock that has stopped.", "explanation": "The decisive clue is the recurring stopped-clock image linked to moments of choice.", "difficulty": "easy"},
+      {"text": "Different characters repeatedly leave meals unfinished whenever they conceal the truth.", "explanation": "The repeated situation of abandoned food forms a motif connecting secrecy with broken fellowship.", "difficulty": "medium"},
+      {"text": "Versions of a blue thread appear as a bracelet, a loose seam, and a line on a map throughout the story.", "explanation": "The varied recurrence creates a unifying motif that can develop themes of connection and separation.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-motif", "https://www.britannica.com/art/motif-narrative-literature"]
+  },
+  {
+    "id": "motivation-of-a-character",
+    "term": "Motivation (of a character)",
+    "category": "Character",
+    "definition": "The desire, need, fear, belief, obligation, or combination of pressures that explains why a character pursues a goal or makes a choice.",
+    "spottingTips": ["Separate the character's goal—what they want—from the motivation—why they want it.", "Infer motives from repeated choices, dialogue, history, and stakes, while allowing mixed or hidden motives."],
+    "confusedWith": "Character trait: a trait describes what someone is like; motivation explains what drives a particular action or goal.",
+    "examples": [
+      {"text": "Kian enters the race to pay for his sister's medicine.", "explanation": "The decisive clue is the stated need that drives his goal of winning.", "difficulty": "easy"},
+      {"text": "Although she claims to seek justice, the captain questions only witnesses who once mocked her.", "explanation": "The pattern suggests personal revenge as a hidden or mixed motivation beneath her stated one.", "difficulty": "medium"},
+      {"text": "Oren destroys the letter he traveled years to find because reading it might end his hope that his father was innocent.", "explanation": "Protecting a sustaining belief motivates an action that conflicts with his apparent goal of learning the truth.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://openoregon.pressbooks.pub/fictiontextbook/chapter/character/", "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/index.html"]
+  },
+  {
+    "id": "objective-point-of-view",
+    "term": "Objective Point Of View",
+    "category": "Point of View",
+    "definition": "A third-person narrative stance that reports only observable actions, speech, and external details, without directly entering any character's thoughts or feelings.",
+    "spottingTips": ["Ask whether every detail could be recorded by a camera or microphone.", "Treat emotion inferred from gestures as external reporting unless the narrator states inner experience."],
+    "confusedWith": "Omniscient point of view: omniscient narration can reveal any mind; objective narration reveals none directly.",
+    "examples": [
+      {"text": "Lena folded the letter twice. She set it beside the cup and left without drinking.", "explanation": "The decisive clue is that only visible actions are reported; Lena's thoughts remain unstated.", "difficulty": "easy"},
+      {"text": "'You came,' Arun said. His hand stayed on the doorknob while the hallway clock ticked six times.", "explanation": "Dialogue, gesture, and sound are observable, so readers must infer his feelings.", "difficulty": "medium"},
+      {"text": "Mara smiled. Under the table, her shoe pressed a crescent into the carpet.", "explanation": "Even the tension suggested by the hidden gesture is shown externally rather than named as an internal state.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://openoregon.pressbooks.pub/fictiontextbook/chapter/point-of-view/", "https://liberalarts.oregonstate.edu/wlf/what-narrator"]
+  },
+  {
+    "id": "omniscient-point-of-view",
+    "term": "Omniscient Point Of View",
+    "category": "Point of View",
+    "definition": "A third-person narrative stance in which the narrator may know and reveal the thoughts, histories, or experiences of multiple characters and may supply information no character possesses.",
+    "spottingTips": ["Look for access to more than one character's inner life.", "Notice knowledge that ranges across places, times, or facts beyond any single observer."],
+    "confusedWith": "Third-person limited: limited narration stays mainly inside one perspective at a time; omniscient narration can range freely.",
+    "examples": [
+      {"text": "Nia feared the bell meant failure; across town, her brother heard it and expected rescue.", "explanation": "The decisive clue is direct access to two characters' different thoughts in separate places.", "difficulty": "easy"},
+      {"text": "No one at the table knew that beneath them the river had already broken the cellar wall.", "explanation": "The narrator supplies information unavailable to every present character.", "difficulty": "medium"},
+      {"text": "The mayor remembered last winter, the child imagined next summer, and the narrator noted that neither would remain in the city by spring.", "explanation": "The narration ranges through multiple minds and adds future knowledge beyond both.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://openoregon.pressbooks.pub/fictiontextbook/chapter/point-of-view/", "https://liberalarts.oregonstate.edu/wlf/what-narrator"]
+  },
+  {
+    "id": "onomatopoeia",
+    "term": "Onomatopoeia",
+    "category": "Sound and Poetry",
+    "definition": "Use of a word whose sound imitates or strongly suggests the sound it names or describes.",
+    "spottingTips": ["Say the word aloud and compare it with the real sound.", "Look for sound-imitating verbs and interjections embedded in description, not only comic-book effects."],
+    "confusedWith": "Cacophony: onomatopoeia imitates a specific noise; cacophony is a broader harsh sound pattern.",
+    "examples": [
+      {"text": "The bacon sizzled in the pan.", "explanation": "The decisive clue is 'sizzled,' whose sound suggests the noise of frying.", "difficulty": "easy"},
+      {"text": "Rain pattered, then drummed against the awning.", "explanation": "Pattered and drummed acoustically suggest two intensities of the rain's sound.", "difficulty": "medium"},
+      {"text": "With a soft thwick, the arrow buried itself in the wet target.", "explanation": "The invented sound word 'thwick' imitates the impact it describes.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-onomatopoeia", "https://www.poetryfoundation.org/education/glossary/onomatopoeia"]
+  },
+  {
+    "id": "oxymoron",
+    "term": "Oxymoron",
+    "category": "Figurative Language",
+    "definition": "A compact phrase that places apparently contradictory or sharply opposing words together to create a meaningful effect.",
+    "spottingTips": ["Look for contradiction within a short phrase, often adjective plus noun.", "Explain the more precise or complex idea created by combining the opposites."],
+    "confusedWith": "Paradox: an oxymoron is usually a two-word or brief contradictory expression; a paradox is a fuller statement or situation.",
+    "examples": [
+      {"text": "The room filled with deafening silence.", "explanation": "The decisive clue is the close pairing of incompatible 'deafening' and 'silence' to stress intensity.", "difficulty": "easy"},
+      {"text": "They maintained an orderly chaos behind the stage.", "explanation": "Opposing terms combine in one noun phrase to describe confusion that still follows a system.", "difficulty": "medium"},
+      {"text": "Her carefully spontaneous reply fooled everyone.", "explanation": "Carefully and spontaneous contradict on the surface but together suggest rehearsed naturalness.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-oxymoron", "https://www.poetryfoundation.org/education/glossary/oxymoron"]
+  },
+  {
+    "id": "paradox",
+    "term": "Paradox",
+    "category": "Figurative Language",
+    "definition": "A statement or situation that seems self-contradictory or impossible but reveals a defensible insight when examined.",
+    "spottingTips": ["State the apparent contradiction, then explain the underlying sense.", "Do not label a claim paradoxical if it is merely false or nonsensical."],
+    "confusedWith": "Oxymoron: an oxymoron compresses contradiction into a brief phrase; a paradox develops it as a statement or situation.",
+    "examples": [
+      {"text": "The more choices he had, the less free he felt.", "explanation": "The decisive clue is the apparent contradiction that increased options can produce paralyzing pressure.", "difficulty": "easy"},
+      {"text": "To preserve the tradition, the village must allow it to change.", "explanation": "Change seems opposed to preservation, yet adaptation may be what keeps a living practice alive.", "difficulty": "medium"},
+      {"text": "Only after the archive burned did the town begin remembering its history.", "explanation": "Loss of stored records appears to prevent memory but instead forces active communal remembrance.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.poetryfoundation.org/education/glossary/paradox", "https://www.britannica.com/art/paradox-literature"]
+  },
+  {
+    "id": "parallelism",
+    "term": "Parallelism",
+    "category": "Rhetoric and Syntax",
+    "definition": "Use of matching grammatical structures for words, phrases, clauses, or sentences that hold equal or related ideas.",
+    "spottingTips": ["Compare parts of speech and grammatical patterns across coordinated units.", "Listen for balance and rhythm, then connect the pattern to emphasis or relationships."],
+    "confusedWith": "Repetition: parallelism repeats structure; it may use completely different words.",
+    "examples": [
+      {"text": "She came to learn, to serve, and to lead.", "explanation": "The decisive clue is three matching infinitive phrases.", "difficulty": "easy"},
+      {"text": "The river shaped the valley; the valley shaped the town.", "explanation": "The clauses share the same subject-verb-object structure, emphasizing mutual formation.", "difficulty": "medium"},
+      {"text": "What we forgive in daylight, we remember at dusk; what we promise at dusk, we abandon by dawn.", "explanation": "Repeated clause patterns balance changing ideas across a more complex sentence.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://owl.purdue.edu/owl/general_writing/mechanics/parallel_structure.html", "https://rhetoric.byu.edu/Figures/P/parallelism.htm"]
+  },
+  {
+    "id": "paraphrase",
+    "term": "Paraphrase",
+    "category": "Reading and Analysis",
+    "definition": "A restatement of a passage's full meaning in genuinely new wording and sentence structure, usually at roughly the same level of detail.",
+    "spottingTips": ["Preserve all important claims and relationships while changing both vocabulary and syntax.", "Credit the source even when no exact wording remains."],
+    "confusedWith": "Summary: a summary condenses to main points; a paraphrase restates the source's specific content and detail.",
+    "examples": [
+      {"text": "Original idea: The path flooded after the dam opened. Paraphrase: Releasing the dam's water submerged the trail.", "explanation": "The decisive clue is the same causal meaning expressed with new words and structure.", "difficulty": "easy"},
+      {"text": "Original idea: Although tired, the council continued because delay threatened the vote. Paraphrase: The exhausted council pressed on, since postponement could cost them the decision.", "explanation": "The concession and reason are both preserved without copying the original phrasing.", "difficulty": "medium"},
+      {"text": "Original idea: Memory edits experience before we can narrate it. Paraphrase: By the time people tell what happened, recollection has already reshaped the event.", "explanation": "The abstract relationship remains intact while vocabulary, syntax, and metaphor are recast.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html", "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/index.html"]
+  },
+  {
+    "id": "personification",
+    "term": "Personification",
+    "category": "Figurative Language",
+    "definition": "A figure that gives human action, emotion, intention, speech, or other human qualities to an animal, object, place, or abstract idea.",
+    "spottingTips": ["Name the nonhuman subject and the specifically human quality assigned to it.", "Distinguish figurative human behavior from literal traits an animal can actually have."],
+    "confusedWith": "Apostrophe: personification describes something as human; apostrophe directly addresses something absent or nonhuman.",
+    "examples": [
+      {"text": "The alarm clock scolded me from the dresser.", "explanation": "The decisive clue is the clock performing the human act of scolding.", "difficulty": "easy"},
+      {"text": "Jealous vines strangled the abandoned fence.", "explanation": "Jealousy and intentional strangling give the plants human emotion and agency.", "difficulty": "medium"},
+      {"text": "History cleared its throat whenever the council tried to forget.", "explanation": "The abstract concept History receives a human bodily action and implied intention.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-personification", "https://www.poetryfoundation.org/education/glossary/personification"]
+  },
+  {
+    "id": "plot-exposition-rising-action-climax-resolution-denouement",
+    "term": "Plot (exposition, rising action, climax, resolution / denouement)",
+    "category": "Plot and Structure",
+    "definition": "The arranged chain of events and causes in a narrative. Exposition establishes the situation; rising action adds complications; climax is the decisive crisis; resolution or denouement shows consequences, settles major conflicts, and establishes the closing state.",
+    "spottingTips": ["Chart events by function and causation, not only chronological order.", "Locate what is established, what escalates, what turns irreversibly, and what settles afterward."],
+    "confusedWith": "Story: story is what happens in chronological sequence; plot is how and why events are selected and arranged.",
+    "examples": [
+      {"text": "A baker needs prize money to save her shop; rivals sabotage each round; she chooses to help an injured rival in the final; she loses the prize but gains a partnership that keeps the shop open.", "explanation": "The decisive clue is the full progression: setup, escalating obstacles, climactic choice, and resolving new partnership.", "difficulty": "easy"},
+      {"text": "The opening shows a drought-struck town and a forbidden well. Theft accusations escalate until a child publicly opens the well; the exposed underground spring then becomes communal property.", "explanation": "Exposition establishes scarcity, rising action builds accusations, the opening is the climax, and shared water is the denouement.", "difficulty": "medium"},
+      {"text": "A novel begins after a failed rebellion, reveals its causes out of order, intensifies pursuit of the last rebel, turns when she destroys the evidence that could restore her name, and ends with official history intact but private witnesses speaking.", "explanation": "Despite nonlinear presentation, each named phase is identifiable by structural function: setup, escalation, decisive sacrifice, and consequences.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-plot-definition-and-examples", "https://openoregon.pressbooks.pub/fictiontextbook/chapter/plot/"]
+  },
+  {
+    "id": "point-of-view-1st-3rd-omniscient-objective",
+    "term": "Point of View (1st person, 3rd person, omniscient, objective)",
+    "category": "Point of View",
+    "definition": "The position from which a story is told. First person uses an involved 'I' or 'we'; third person uses 'he,' 'she,' or 'they.' Third person may be omniscient, entering multiple minds and knowing beyond them, or objective, reporting only observable behavior and speech.",
+    "spottingTips": ["Identify pronouns, narrator participation, and whose inner thoughts are directly available.", "Do not classify by pronouns alone; test the narrator's range of knowledge."],
+    "confusedWith": "Perspective: point of view is the narrative position and access; perspective is the particular outlook shaped by experience and values.",
+    "examples": [
+      {"text": "I hid the receipt before my sister entered, though I told myself I was protecting her.", "explanation": "The decisive clue is a participating 'I' narrating personal action and thought: first person.", "difficulty": "easy"},
+      {"text": "Tomas closed the gate. He wondered whether Alia had seen him; across the field, she hoped he had not noticed her.", "explanation": "Third-person pronouns plus direct access to two minds mark third-person omniscient narration.", "difficulty": "medium"},
+      {"text": "Tomas closed the gate. Alia stepped behind the tree. Neither spoke as the train passed.", "explanation": "Third-person narration reports only visible action and sound, making it objective rather than omniscient.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://openoregon.pressbooks.pub/fictiontextbook/chapter/point-of-view/", "https://liberalarts.oregonstate.edu/wlf/what-narrator"]
+  },
+  {
+    "id": "pun",
+    "term": "Pun",
+    "category": "Language and Style",
+    "definition": "Wordplay that exploits two meanings of one word or the similar sounds of different words, often for humor, wit, or thematic emphasis.",
+    "spottingTips": ["Identify both meanings or both sound-alike words activated by context.", "Explain why the sentence invites both readings at once."],
+    "confusedWith": "Ambiguity: ambiguity may be unintentional or serious openness; a pun deliberately activates meanings for wordplay.",
+    "examples": [
+      {"text": "The gardener's career is finally taking root.", "explanation": "The decisive clue is 'taking root' meaning both plants establishing themselves and a career becoming secure.", "difficulty": "easy"},
+      {"text": "After losing his oar, the guide admitted he was up a creek.", "explanation": "The familiar phrase means being in trouble and is also literally true in the boat scene.", "difficulty": "medium"},
+      {"text": "The exhausted optician said the future looked blurry.", "explanation": "Blurry describes both literal vision and uncertain prospects, activating two meanings.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/pun", "https://www.poetryfoundation.org/education/glossary/pun"]
+  },
+  {
+    "id": "quatrain",
+    "term": "Quatrain",
+    "category": "Poetic Form",
+    "definition": "A stanza or self-contained poem of four lines, with any of several possible meters and rhyme schemes or no rhyme at all.",
+    "spottingTips": ["Count four verse lines in the unit.", "Describe rhyme and meter separately; neither is required for a passage to be a quatrain."],
+    "confusedWith": "Couplet: a couplet has two lines; a quatrain has four.",
+    "examples": [
+      {"text": "Dawn lifts the shade. / The rooftops shine. / A sparrow shakes / the sleeping vine.", "explanation": "The decisive clue is a single four-line stanza.", "difficulty": "easy"},
+      {"text": "Four lines form an ABAB unit: 'The market wakes beneath the rain / while shutters open to the street / and vendors call beside the train / as puddles mirror passing feet.'", "explanation": "The four-line grouping is the quatrain; the alternating rhyme is an additional feature.", "difficulty": "medium"},
+      {"text": "A poem consists of three unrhymed stanzas, each containing four irregular lines.", "explanation": "Each stanza is still a quatrain because line count, not rhyme or regular meter, is decisive.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.poetryfoundation.org/education/glossary/quatrain", "https://www.britannica.com/art/quatrain"]
+  },
+  {
+    "id": "refrain",
+    "term": "Refrain",
+    "category": "Poetic Form",
+    "definition": "A line, phrase, or group of lines that returns at planned intervals in a poem or song, often anchoring structure and accumulating changed meaning.",
+    "spottingTips": ["Look for a repeated unit returning after intervening lines or stanzas.", "Compare how its meaning shifts as the surrounding context changes."],
+    "confusedWith": "Repetition: all refrains repeat, but a refrain returns in a recognizable structural position.",
+    "examples": [
+      {"text": "Each stanza ends, 'Still the river carries on.'", "explanation": "The decisive clue is the same line returning at a regular stanza-ending position.", "difficulty": "easy"},
+      {"text": "After every new excuse, the poem returns to 'Who locked the gate?'", "explanation": "The recurring question functions as a structural anchor separated by new material.", "difficulty": "medium"},
+      {"text": "'I know the way home' closes the first, fourth, and final stanzas, sounding confident, doubtful, then ironic.", "explanation": "The intermittent but planned return and shifting context make the line a refrain.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.poetryfoundation.org/education/glossary/refrain", "https://www.britannica.com/art/refrain"]
+  },
+  {
+    "id": "repetition",
+    "term": "Repetition",
+    "category": "Rhetoric and Syntax",
+    "definition": "Deliberate reuse of sounds, words, phrases, lines, images, or structures to create emphasis, rhythm, cohesion, escalation, or changed meaning.",
+    "spottingTips": ["Mark exactly what recurs and how often.", "Explain what the recurrence does in context instead of treating repetition as automatically emphatic."],
+    "confusedWith": "Refrain: a refrain is a repeated line or group returning in set structural positions; repetition is the broader device.",
+    "examples": [
+      {"text": "Wait, wait, wait—your name is not on the list.", "explanation": "The decisive clue is immediate reuse of 'wait' to create urgency.", "difficulty": "easy"},
+      {"text": "The story repeats the phrase 'nothing to report' after each increasingly alarming event.", "explanation": "The recurring words create irony and escalation as context changes.", "difficulty": "medium"},
+      {"text": "First a door knocks in the wind, later a judge knocks a gavel, and finally the narrator says opportunity never knocked.", "explanation": "Repetition of the sound and word links distinct scenes and develops a pattern of judgment and missed chances.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://rhetoric.byu.edu/Figures/Groupings/of%20Repetition.htm", "https://www.poetryfoundation.org/education/glossary/repetition"]
+  },
+  {
+    "id": "rhetorical-question",
+    "term": "Rhetorical Question",
+    "category": "Rhetoric and Argument",
+    "definition": "A question asked to make a point, guide thought, challenge, or create emphasis rather than to request an actual answer.",
+    "spottingTips": ["Ask whether the speaker expects a response from the audience.", "Restate the implied assertion or pressure behind the question."],
+    "confusedWith": "Direct question: a direct question genuinely seeks missing information; a rhetorical question supplies or assumes its own answer.",
+    "examples": [
+      {"text": "How many warnings must we ignore before we act?", "explanation": "The decisive clue is that the speaker presses for action rather than seeking a number.", "difficulty": "easy"},
+      {"text": "The narrator surveys the ruined garden and asks, 'Was this what victory looked like?'", "explanation": "The question implies that the outcome is not genuine victory.", "difficulty": "medium"},
+      {"text": "If silence were innocence, who among us would need a voice?", "explanation": "The speaker uses a question to challenge an assumption and imply that speaking is morally necessary.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://rhetoric.byu.edu/Figures/R/rhetorical%20questions.htm", "https://owl.purdue.edu/owl/general_writing/academic_writing/logic_in_argumentative_writing/index.html"]
+  },
+  {
+    "id": "satire",
+    "term": "Satire",
+    "category": "Narrative and Meaning",
+    "definition": "Use of humor, irony, exaggeration, parody, or ridicule to expose and criticize human foolishness, harmful behavior, or social institutions, often with an implied desire for reform.",
+    "spottingTips": ["Identify the real behavior or institution targeted beneath the comic surface.", "Explain how distortion or irony reveals the target's flaw."],
+    "confusedWith": "Parody: parody imitates a style for comic effect; satire targets vice or folly and may use parody as a method.",
+    "examples": [
+      {"text": "A town combats noise by installing loudspeakers that broadcast hourly reminders to be quiet.", "explanation": "The decisive clue is the absurd contradiction ridiculing self-defeating bureaucracy.", "difficulty": "easy"},
+      {"text": "In the story, officials solve homelessness by renaming benches 'temporary residences' and celebrating a statistical victory.", "explanation": "Euphemism and absurd policy expose leaders who value appearances over human welfare.", "difficulty": "medium"},
+      {"text": "A productivity manual requires workers to spend half each day documenting why they have no time to work.", "explanation": "Exaggerated administrative logic criticizes systems that mistake measurement for productivity.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/satire", "https://www.poetryfoundation.org/education/glossary/satire"]
+  },
+  {
+    "id": "setting-time-place-situation",
+    "term": "Setting (time, place, situation)",
+    "category": "Narrative and Meaning",
+    "definition": "The conditions in which a narrative occurs: time includes period and duration, place includes physical and social environment, and situation includes the surrounding historical, cultural, political, or personal circumstances.",
+    "spottingTips": ["Record when, where, and under what conditions events occur.", "Connect specific setting details to character options, conflict, mood, or theme."],
+    "confusedWith": "Mood: setting consists of narrative conditions; mood is the emotional atmosphere those conditions may help create.",
+    "examples": [
+      {"text": "The story opens in a coastal Louisiana town during the final humid week before a hurricane.", "explanation": "The decisive clues establish place and time, which also create an approaching natural threat.", "difficulty": "easy"},
+      {"text": "Two sisters share a one-room apartment during a citywide transit strike that has just cost one of them her job.", "explanation": "Physical place combines with an economic and civic situation that limits the characters' choices.", "difficulty": "medium"},
+      {"text": "The play occurs over one election night in an embassy kitchen, where staff from a collapsing government wait for borders to close.", "explanation": "The compressed time, confined place, and political situation all actively shape the conflict.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://openoregon.pressbooks.pub/fictiontextbook/chapter/setting/", "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/index.html"]
+  },
+  {
+    "id": "simile",
+    "term": "Simile",
+    "category": "Figurative Language",
+    "definition": "An explicit comparison between unlike things, usually signaled by 'like,' 'as,' 'than,' or a similar comparative phrase.",
+    "spottingTips": ["Find the comparison signal and name both things compared.", "Confirm the phrase compares qualities; not every use of 'like' or 'as' is figurative."],
+    "confusedWith": "Metaphor: a simile signals comparison explicitly; a metaphor directly identifies or transfers qualities.",
+    "examples": [
+      {"text": "The frozen pond shone like a dropped coin.", "explanation": "The decisive clue is 'like' explicitly comparing the pond's shine and shape to a coin.", "difficulty": "easy"},
+      {"text": "Her explanation unraveled as quickly as cheap thread.", "explanation": "'As' signals a comparison between the failing explanation and thread coming apart.", "difficulty": "medium"},
+      {"text": "He moved through praise the way a diver moves through dark water—carefully, never breathing it in.", "explanation": "'The way' establishes an extended explicit comparison that characterizes his caution around approval.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-simile", "https://www.poetryfoundation.org/education/glossary/simile"]
+  },
+  {
+    "id": "soliloquy",
+    "term": "Soliloquy",
+    "category": "Drama and Narrative",
+    "definition": "A dramatic speech in which a character, alone or effectively unheard, voices private thoughts directly so the audience can understand an inner conflict or plan.",
+    "spottingTips": ["Check that other characters cannot hear or are treated as absent.", "Look for private reasoning, self-questioning, confession, or decision spoken aloud."],
+    "confusedWith": "Monologue: any extended speech by one character is a monologue; a soliloquy specifically reveals private thought without an in-scene listener.",
+    "examples": [
+      {"text": "Alone after court, the judge says, 'If I follow the law, I betray justice; if I bend it, I betray my oath.'", "explanation": "The decisive clue is an isolated character speaking an internal conflict aloud for the audience.", "difficulty": "easy"},
+      {"text": "When the guards exit, the prisoner rehearses three escape plans and admits which friend he cannot abandon.", "explanation": "The private speech exposes planning and motive without another character hearing.", "difficulty": "medium"},
+      {"text": "At a crowded masked ball, the heroine steps into a pool of light and speaks thoughts no reveler acknowledges before rejoining the dance.", "explanation": "Stage convention makes her effectively unheard, so the audience receives a soliloquy despite others being physically present.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/soliloquy", "https://www.poetryfoundation.org/education/glossary/soliloquy"]
+  },
+  {
+    "id": "stanza",
+    "term": "Stanza",
+    "category": "Poetic Form",
+    "definition": "A grouped set of verse lines separated from other lines, usually by space or indentation, functioning somewhat like a paragraph in prose.",
+    "spottingTips": ["Look for visible blocks of lines divided by blank space.", "Compare each block's line count, rhyme, syntax, or role in the poem."],
+    "confusedWith": "Verse: verse can mean poetry generally or a single line; a stanza is a grouped unit of lines.",
+    "examples": [
+      {"text": "A poem has four lines, a blank space, then four more lines.", "explanation": "The decisive clue is that spacing divides the poem into two stanzas.", "difficulty": "easy"},
+      {"text": "The first six-line block recalls summer; after a blank line, a three-line block returns to winter.", "explanation": "Each visually separated group is a stanza even though their lengths differ.", "difficulty": "medium"},
+      {"text": "A long poem repeats a five-line visual unit whose final line is indented, though neither rhyme nor sentence boundaries align with it.", "explanation": "Consistent visual grouping, not rhyme or grammatical completion, is the decisive stanza marker.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.poetryfoundation.org/education/glossary/stanza", "https://www.britannica.com/art/stanza"]
+  },
+  {
+    "id": "stream-of-consciousness",
+    "term": "Stream Of Consciousness",
+    "category": "Point of View",
+    "definition": "A narrative technique that represents the ongoing flow of a character's thoughts, sensations, memories, and associations, often with abrupt transitions or loosened conventional syntax.",
+    "spottingTips": ["Track associative jumps prompted by sounds, objects, or half-formed memories.", "Look for language shaped by immediate mental movement rather than orderly retrospective explanation."],
+    "confusedWith": "Interior monologue: interior monologue directly presents thought; stream of consciousness more broadly imitates its fluid, associative process.",
+    "examples": [
+      {"text": "Keys, where are the keys, blue bowl no, blue was Mother's coat and I never returned it—bus brakes outside.", "explanation": "The decisive clue is rapid associative movement among search, color, memory, and present sound.", "difficulty": "easy"},
+      {"text": "He reads the menu: pears, pairs, the two shoes by her hospital bed, don't think of beds, order coffee.", "explanation": "A sound association triggers an involuntary memory and self-interruption, mimicking thought in motion.", "difficulty": "medium"},
+      {"text": "Green light across the ceiling swimming no the pond in June when the rope snapped did I call out or only open my mouth and now the nurse again.", "explanation": "Loosened syntax and unmarked shifts among sensation, memory, question, and present awareness create stream of consciousness.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/stream-of-consciousness", "https://openoregon.pressbooks.pub/fictiontextbook/chapter/point-of-view/"]
+  },
+  {
+    "id": "symbol",
+    "term": "Symbol",
+    "category": "Narrative and Meaning",
+    "definition": "A concrete object, character, place, action, or image that retains its literal role while also carrying broader meanings developed by context and pattern.",
+    "spottingTips": ["Track emphasis, recurrence, changes, and character responses around the possible symbol.", "Support symbolic meaning from the specific work rather than relying only on a universal symbol list."],
+    "confusedWith": "Motif: a symbol carries additional meaning; a motif is any recurring element and may organize several symbols.",
+    "examples": [
+      {"text": "After every lie, a new crack appears in the family's dining table.", "explanation": "The decisive clue is the table's literal damage repeatedly developing a broader meaning of fractured family trust.", "difficulty": "easy"},
+      {"text": "A refugee keeps a house key that no longer opens any existing door.", "explanation": "The literal key also comes to represent lost home, belonging, and hoped-for return.", "difficulty": "medium"},
+      {"text": "The town's spotless public fountain runs from pipes that poison the poorest district.", "explanation": "Within context, the functioning fountain symbolizes a polished civic image built on concealed inequality.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-symbolism", "https://www.poetryfoundation.org/education/glossary/symbol"]
+  },
+  {
+    "id": "synecdoche",
+    "term": "Synecdoche",
+    "category": "Figurative Language",
+    "definition": "A substitution in which a part stands for the whole, the whole stands for a part, or a material or class stands for something made from or belonging to it.",
+    "spottingTips": ["Identify the literal part-whole relationship between the named and intended things.", "If the link is merely association rather than inclusion, consider metonymy instead."],
+    "confusedWith": "Metonymy: synecdoche depends on part-whole inclusion; metonymy depends on another close association.",
+    "examples": [
+      {"text": "We need more hands to unload the truck.", "explanation": "The decisive clue is a body part standing for whole workers.", "difficulty": "easy"},
+      {"text": "Three new sails appeared beyond the harbor wall.", "explanation": "Sails, parts of sailing vessels, stand for the whole ships.", "difficulty": "medium"},
+      {"text": "The school won the debate, though only two students competed.", "explanation": "The whole institution stands for a small participating part, a whole-for-part form of synecdoche.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/synecdoche", "https://www.poetryfoundation.org/education/glossary/synecdoche"]
+  },
+  {
+    "id": "syntax",
+    "term": "Syntax",
+    "category": "Rhetoric and Syntax",
+    "definition": "The arrangement of words, phrases, and clauses into sentences, including order, length, complexity, punctuation, and patterns of connection.",
+    "spottingTips": ["Describe sentence structure precisely: short or long, simple or embedded, balanced or fragmented.", "Connect structure to pace, emphasis, voice, or meaning rather than discussing word choice alone."],
+    "confusedWith": "Diction: diction is word choice; syntax is how the chosen words are arranged.",
+    "examples": [
+      {"text": "He ran. The gate fell. Dust rose.", "explanation": "The decisive clue is a sequence of short simple sentences creating rapid, blunt pacing.", "difficulty": "easy"},
+      {"text": "Because the warning arrived after midnight, when the roads had iced and the phones had failed, no one left.", "explanation": "Layered dependent clauses delay the main statement and mimic accumulating obstacles.", "difficulty": "medium"},
+      {"text": "The narrator describes the riot in one breathless sentence but gives each broken object its own fragment afterward. Glass. Shoe. Photograph.", "explanation": "The contrast between extended syntax and fragments shifts pace from chaos to stunned attention.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.poetryfoundation.org/education/glossary/syntax", "https://owl.purdue.edu/owl/general_writing/mechanics/sentence_clarity.html"]
+  },
+  {
+    "id": "theme",
+    "term": "Theme",
+    "category": "Narrative and Meaning",
+    "definition": "A work's developed insight or question about a broad subject, expressed through the interaction of plot, character, imagery, conflict, and other patterns.",
+    "spottingTips": ["Phrase theme as a complete, qualified idea rather than a one-word topic.", "Support it with a pattern across the whole work, including complications or counterexamples."],
+    "confusedWith": "Topic: a topic is a subject such as ambition; a theme is what the work suggests about ambition.",
+    "examples": [
+      {"text": "Across the novel, characters who hide mistakes become controlled by them, while confession makes repair possible but not painless.", "explanation": "The decisive clue is a developed claim about secrecy and accountability supported across multiple arcs.", "difficulty": "easy"},
+      {"text": "A story repeatedly shows that inherited traditions can preserve identity while also excluding those who need the community most.", "explanation": "The thematic insight is qualified and holds two tensions, not merely the topic 'tradition.'", "difficulty": "medium"},
+      {"text": "Every attempt to record the past changes it, yet the final act of imperfect testimony prevents total erasure.", "explanation": "The pattern supports a nuanced theme: memory is unreliable but still ethically necessary.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://openoregon.pressbooks.pub/fictiontextbook/chapter/theme/", "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_about_fiction/index.html"]
+  },
+  {
+    "id": "tone",
+    "term": "Tone",
+    "category": "Language and Style",
+    "definition": "The speaker's, narrator's, or implied author's attitude toward a subject or audience, conveyed through diction, syntax, detail, imagery, and level of formality.",
+    "spottingTips": ["Choose a precise attitude word and identify the target of that attitude.", "Cite language choices that reveal the stance, especially when stated content and tone differ."],
+    "confusedWith": "Mood: tone is an expressed attitude; mood is the emotional atmosphere experienced by readers.",
+    "examples": [
+      {"text": "Our brilliant committee has once again scheduled the meeting for a building that is closed.", "explanation": "The decisive clue is ironic praise revealing a mocking, exasperated tone toward the committee.", "difficulty": "easy"},
+      {"text": "The narrator calls the abandoned bicycle 'a patient little machine, waiting beside the weeds.'", "explanation": "Tender diction creates an affectionate, wistful tone toward the object and its absent owner.", "difficulty": "medium"},
+      {"text": "The report lists each vanished neighborhood in exact acreage and concludes, 'Growth proceeded efficiently.'", "explanation": "Cold precision and bureaucratic phrasing create a detached tone that may also imply quiet condemnation.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://liberalarts.oregonstate.edu/wlf/what-difference-between-mood-and-tone-definitions-and-examples", "https://owl.purdue.edu/owl/general_writing/writing_style/index.html"]
+  },
+  {
+    "id": "tragedy",
+    "term": "Tragedy",
+    "category": "Drama and Narrative",
+    "definition": "A serious dramatic or narrative form in which consequential conflict leads to profound suffering, loss, or downfall, often revealing limits in a central figure, society, fate, or moral order and arousing pity and fear.",
+    "spottingTips": ["Track how choices, character limitations, and larger forces combine toward irreversible loss.", "Look beyond a sad ending for a serious pattern of consequence and insight."],
+    "confusedWith": "Disaster story: tragedy interprets suffering through character, choice, and meaning; disaster alone does not establish the genre.",
+    "examples": [
+      {"text": "A reforming governor refuses every compromise, divides her allies, and watches the old regime return after her execution.", "explanation": "The decisive clue is a serious downfall produced by both admirable purpose and destructive rigidity.", "difficulty": "easy"},
+      {"text": "To prevent a predicted war, two families imprison their heirs; the imprisonment itself sparks the rebellion that destroys both houses.", "explanation": "Attempts to avoid catastrophe help cause it, creating irreversible loss and tragic insight.", "difficulty": "medium"},
+      {"text": "A healer saves the capital by revealing a plague's source, then learns the cure requires destroying the community whose knowledge made his discovery possible.", "explanation": "The irresolvable moral conflict makes success inseparable from profound loss, a tragic structure rather than a merely unhappy event.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/tragedy-literature", "https://www.poetryfoundation.org/education/glossary/tragedy"]
+  },
+  {
+    "id": "understatement",
+    "term": "Understatement",
+    "category": "Figurative Language",
+    "definition": "Deliberate presentation of something as less important, intense, serious, or extensive than it really is, often for irony, restraint, or humor.",
+    "spottingTips": ["Compare the mild wording with the actual scale of the situation.", "Identify whether the gap creates humor, composure, criticism, or emotional control."],
+    "confusedWith": "Litotes: litotes is a subtype that understates by negating the opposite; understatement need not use negation.",
+    "examples": [
+      {"text": "After the tornado removed the roof, Dad said, 'We may need a tarp.'", "explanation": "The decisive clue is the mild response to extreme damage.", "difficulty": "easy"},
+      {"text": "Finishing the marathon on a broken shoe was 'slightly inconvenient,' she reported.", "explanation": "The phrase drastically minimizes genuine difficulty for restrained humor.", "difficulty": "medium"},
+      {"text": "The historian calls a decade of famine and revolt 'an unsettled interval.'", "explanation": "The calm, compressed label minimizes the period's severity and may reveal critical irony.", "difficulty": "hard"}
+    ],
+    "sourceUrls": ["https://www.britannica.com/art/understatement", "https://rhetoric.byu.edu/Figures/M/meiosis.htm"]
+  }
+]
