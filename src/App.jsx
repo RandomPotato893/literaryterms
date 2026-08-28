@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import terms from './data/terms.json'
 import { quizVariantsForTerm } from './data/quizVariants'
+import { learnTermPool } from './data/greekMode'
 import {
   clearProgress,
   getLearnStage,
@@ -20,8 +21,10 @@ import {
 import { learnAttempts, pickNextLearnQuestion } from './lib/learn'
 import {
   clearLearnSession,
+  loadGreekModePreference,
   loadLastView,
   loadLearnSession,
+  saveGreekModePreference,
   saveLastView,
   saveLearnSession,
 } from './lib/sessionStorage'
@@ -369,12 +372,14 @@ function StatCard({ label, value, suffix, accent }) {
   )
 }
 
-function createLearnSession(terms, progress, enabledFormats) {
+function createLearnSession(terms, progress, enabledFormats, greekMode = false) {
   if (!enabledFormats.length) throw new Error('A Learn session needs at least one question format.')
-  const questions = buildCompleteLearnQuestions(terms, enabledFormats)
+  const pool = learnTermPool(terms, greekMode)
+  const questions = buildCompleteLearnQuestions(pool, enabledFormats)
   return {
     progress,
     enabledFormats: [...enabledFormats],
+    greekMode: Boolean(greekMode),
     questions,
     question: pickNextLearnQuestion(questions),
     completedIds: [],
@@ -387,7 +392,13 @@ function ContinuousLearn({ terms, progress, recordLearn, replaceLearnStats, open
   const [restoredSession] = useState(() => loadLearnSession())
   const [phase, setPhase] = useState(() => restoredSession?.phase || 'setup')
   const [selectedFormats, setSelectedFormats] = useState(() => restoredSession?.round.enabledFormats || allFormatIds)
-  const [round, setRound] = useState(() => restoredSession?.round || createLearnSession(terms, progress, allFormatIds))
+  const [greekMode, setGreekMode] = useState(() => {
+    if (restoredSession?.round && restoredSession.phase !== 'setup') {
+      return Boolean(restoredSession.round.greekMode)
+    }
+    return loadGreekModePreference()
+  })
+  const [round, setRound] = useState(() => restoredSession?.round || createLearnSession(terms, progress, allFormatIds, greekMode))
   const [selected, setSelected] = useState(() => restoredSession?.ui?.selected || null)
   const [writtenAnswer, setWrittenAnswer] = useState(() => restoredSession?.ui?.writtenAnswer || '')
   const [writtenReview, setWrittenReview] = useState(() => restoredSession?.ui?.writtenReview || null)
@@ -565,7 +576,7 @@ function ContinuousLearn({ terms, progress, recordLearn, replaceLearnStats, open
   }, [phase, round, selected, writtenAnswer, writtenReview, answered])
 
   const restartSession = () => {
-    setRound(createLearnSession(terms, round.progress, round.enabledFormats))
+    setRound(createLearnSession(terms, round.progress, round.enabledFormats, round.greekMode))
     resetQuestionUi()
     setPhase('study')
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -573,7 +584,7 @@ function ContinuousLearn({ terms, progress, recordLearn, replaceLearnStats, open
 
   const startSession = () => {
     if (!selectedFormats.length) return
-    setRound(createLearnSession(terms, round.progress, selectedFormats))
+    setRound(createLearnSession(terms, round.progress, selectedFormats, greekMode))
     resetQuestionUi()
     setPhase('study')
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -596,6 +607,14 @@ function ContinuousLearn({ terms, progress, recordLearn, replaceLearnStats, open
         ? current.filter((id) => id !== formatId)
         : [...current, formatId]
     ))
+  }
+
+  const toggleGreekMode = () => {
+    setGreekMode((current) => {
+      const next = !current
+      saveGreekModePreference(next)
+      return next
+    })
   }
 
   useEffect(() => {
@@ -644,7 +663,9 @@ function ContinuousLearn({ terms, progress, recordLearn, replaceLearnStats, open
     return () => window.removeEventListener('keydown', onKey)
   }, [phase, round, answered, writtenReview, selfGradeChoice])
 
-  const summary = summarizeProgress(terms, round.progress)
+  const sessionGreekMode = phase === 'setup' ? greekMode : Boolean(round.greekMode)
+  const pool = learnTermPool(terms, sessionGreekMode)
+  const summary = summarizeProgress(pool, round.progress)
 
   if (phase === 'setup') {
     return (
@@ -654,10 +675,14 @@ function ContinuousLearn({ terms, progress, recordLearn, replaceLearnStats, open
         onToggle={toggleFormat}
         onSelectAll={() => setSelectedFormats(allFormatIds)}
         onClear={() => setSelectedFormats([])}
+        greekMode={greekMode}
+        onToggleGreekMode={toggleGreekMode}
+        greekTermCount={pool.length}
+        totalTermCount={terms.length}
         onStart={startSession}
-        questionCount={countCompleteLearnQuestions(terms, selectedFormats)}
+        questionCount={countCompleteLearnQuestions(pool, selectedFormats)}
         summary={summary}
-        total={terms.length}
+        total={pool.length}
       />
     )
   }
@@ -667,10 +692,10 @@ function ContinuousLearn({ terms, progress, recordLearn, replaceLearnStats, open
       <div className="page learn-pause-page">
         <div className="learn-pause-card">
           <div className="setup-icon"><Icon name="learn" size={28} /></div>
-          <span className="section-kicker">Learn paused</span>
+          <span className="section-kicker">{round.greekMode ? 'Greek mode paused' : 'Learn paused'}</span>
           <h1>Your place is saved.</h1>
           <p>You’ve mastered {round.completedIds.length} of {round.questions.length} questions in this session. It will remain saved until you explicitly end it.</p>
-          <SetProgressSummary summary={summary} total={terms.length} />
+          <SetProgressSummary summary={summary} total={pool.length} />
           <div className="result-actions">
             <button className="primary-button" onClick={() => setPhase('study')}>Resume learning <Icon name="arrow" size={17} /></button>
             <button className="secondary-button" onClick={configureNewSession}>End session</button>
@@ -688,10 +713,10 @@ function ContinuousLearn({ terms, progress, recordLearn, replaceLearnStats, open
     return (
       <div className="page results-page learn-results">
         <ResultRing score={score} total={round.results.length} />
-        <span className="section-kicker">Learn complete</span>
+        <span className="section-kicker">{round.greekMode ? 'Greek mode complete' : 'Learn complete'}</span>
         <h1>All {round.questions.length} questions complete.</h1>
-        <p>You finished every available question for the formats selected in this session.</p>
-        <SetProgressSummary summary={summary} total={terms.length} />
+        <p>You finished every available question for the formats selected in this session{round.greekMode ? ', using the Greek-mode term bank' : ''}.</p>
+        <SetProgressSummary summary={summary} total={pool.length} />
         <div className="round-skill-summary">
           {learnQuestionFormats.filter((format) => round.enabledFormats.includes(format.id)).map((format) => {
             const formatResults = round.results.filter((result) => result.format === format.id)
@@ -731,21 +756,24 @@ function ContinuousLearn({ terms, progress, recordLearn, replaceLearnStats, open
   const activeFormat = learnQuestionFormats.find((format) => format.id === question.format)
   const answerLabel = question.choices?.find((choice) => choice.id === question.answerId)?.text || term.term
   const visibleSeen = Math.min(
-    terms.length,
+    pool.length,
     summary.seen + (learnAttempts(statsFor(round.progress, question.termId)) === 0 ? 1 : 0),
   )
 
   return (
     <div className="page active-session-page learn-session-page">
       <SessionHeader
-        label={`${summary.mastered} / ${terms.length} mastered`}
+        label={`${summary.mastered} / ${pool.length} mastered`}
         completed={round.completedIds.length}
         total={round.questions.length}
         onExit={() => setPhase('paused')}
       />
       <div className="learn-session-meta">
-        <span className={`skill-chip ${question.skill}`}>{activeFormat?.shortLabel || 'Learn'}</span>
-        <span>{visibleSeen} introduced <i /> {terms.length - summary.mastered} still learning</span>
+        <span className="learn-session-chips">
+          <span className={`skill-chip ${question.skill}`}>{activeFormat?.shortLabel || 'Learn'}</span>
+          {round.greekMode && <span className="skill-chip greek-mode-chip">Greek mode</span>}
+        </span>
+        <span>{visibleSeen} introduced <i /> {pool.length - summary.mastered} still learning</span>
       </div>
 
       <div className="question-shell learn-question-shell">
@@ -903,6 +931,10 @@ function LearnSessionSetup({
   onToggle,
   onSelectAll,
   onClear,
+  greekMode,
+  onToggleGreekMode,
+  greekTermCount,
+  totalTermCount,
   onStart,
   questionCount,
   summary,
@@ -917,6 +949,27 @@ function LearnSessionSetup({
         <span className="section-kicker">Learn session</span>
         <h1>Create a new session.</h1>
         <p className="setup-description">Choose exactly which question formats you want. Turn on all four, mix a few, or clear everything and build from scratch.</p>
+
+        <button
+          type="button"
+          className={`greek-mode-card ${greekMode ? 'on' : ''}`}
+          onClick={onToggleGreekMode}
+          role="switch"
+          aria-checked={greekMode}
+        >
+          <span className="greek-mode-mark" aria-hidden="true">Ω</span>
+          <span className="greek-mode-copy">
+            <strong>Greek mode</strong>
+            <small>
+              {greekMode
+                ? `${greekTermCount} of ${totalTermCount} terms — difficult Greek vocabulary and non-elementary concepts`
+                : 'Limit the bank to difficult Greek words and concepts that are complex or not elementary'}
+            </small>
+          </span>
+          <span className="greek-mode-switch" aria-hidden="true">
+            <span className="greek-mode-knob" />
+          </span>
+        </button>
 
         <div className="setup-form learn-format-form">
           <fieldset aria-labelledby="learn-format-legend">
@@ -951,7 +1004,11 @@ function LearnSessionSetup({
           </fieldset>
 
           {selectedCount
-            ? <p className="format-question-count">{questionCount} questions to master. Incorrect answers stay pending and do not increase the counter.</p>
+            ? (
+              <p className="format-question-count">
+                {questionCount} questions to master{greekMode ? ` from ${greekTermCount} Greek-mode terms` : ''}. Incorrect answers stay pending and do not increase the counter.
+              </p>
+            )
             : <p className="format-selection-note">Select at least one question type to start a session.</p>}
           <button className="primary-button wide" onClick={onStart} disabled={!selectedCount}>
             Start Learn <Icon name="arrow" size={18} />
@@ -960,7 +1017,7 @@ function LearnSessionSetup({
 
         {summary.seen > 0 && (
           <div className="learn-builder-progress">
-            <span>Your saved progress carries into every new session.</span>
+            <span>{greekMode ? 'Saved progress for these Greek-mode terms carries into every new session.' : 'Your saved progress carries into every new session.'}</span>
             <SetProgressSummary summary={summary} total={total} />
           </div>
         )}

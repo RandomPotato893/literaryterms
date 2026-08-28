@@ -22,11 +22,14 @@ import {
 import { eligibleLearnQuestions, learnFormatOrder } from '../src/lib/learn.js'
 import {
   clearLearnSession,
+  loadGreekModePreference,
   loadLastView,
   loadLearnSession,
+  saveGreekModePreference,
   saveLastView,
   saveLearnSession,
 } from '../src/lib/sessionStorage.js'
+import { filterGreekModeTerms, greekModeTermIds, learnTermPool } from '../src/data/greekMode.js'
 
 const terms = JSON.parse(readFileSync(new URL('../src/data/terms.json', import.meta.url), 'utf8'))
 const errors = []
@@ -205,6 +208,36 @@ if (countCompleteLearnQuestions(terms, []) !== 0 || buildCompleteLearnQuestions(
   errors.push('A Learn session with no enabled formats should contain no questions.')
 }
 
+const uniqueGreekModeIds = new Set(greekModeTermIds)
+const termIds = new Set(terms.map((term) => term.id))
+if (uniqueGreekModeIds.size !== greekModeTermIds.length) {
+  errors.push('Greek mode contains duplicate term IDs.')
+}
+for (const id of greekModeTermIds) {
+  if (!termIds.has(id)) errors.push(`Greek mode includes unknown term ID: ${id}.`)
+}
+const greekTerms = filterGreekModeTerms(terms)
+const greekConcepts = buildQuizConcepts(greekTerms)
+const greekLearnQuestions = buildCompleteLearnQuestions(greekTerms, enabledFormatIds)
+if (learnTermPool(terms, false).length !== terms.length) {
+  errors.push('The full Learn bank should be unchanged when Greek mode is off.')
+}
+if (greekTerms.length !== greekModeTermIds.length || greekTerms.length >= terms.length) {
+  errors.push(`Greek mode should contain a strict subset of terms; found ${greekTerms.length} of ${terms.length}.`)
+}
+if (countCompleteLearnQuestions(greekTerms, enabledFormatIds) !== greekConcepts.length * enabledFormatIds.length) {
+  errors.push('Greek-mode Learn question counts do not match the filtered concept bank.')
+}
+if (greekLearnQuestions.some((question) => !uniqueGreekModeIds.has(question.termId))) {
+  errors.push('A Greek-mode Learn session included a term outside the Greek-mode bank.')
+}
+if (greekLearnQuestions.filter((question) => question.format === 'example').length !== greekConcepts.length) {
+  errors.push('Greek mode did not include one example question per remaining concept.')
+}
+for (const term of greekTerms) {
+  checkQuestions(`greek-mode/${term.id}`, [buildLearnQuestion(term, 'recognition', greekTerms)])
+}
+
 const stagedQuestions = buildCompleteLearnQuestions(
   terms.slice(0, 3),
   ['free-response-definition', 'example'],
@@ -283,6 +316,10 @@ if (loadLastView(['home', 'learn']) !== 'learn' || loadLastView(['home']) !== 'h
 }
 clearLearnSession()
 if (loadLearnSession() !== null) errors.push('Explicitly clearing a Learn session did not remove it.')
+saveGreekModePreference(true)
+if (!loadGreekModePreference()) errors.push('Greek mode preference did not persist as on.')
+saveGreekModePreference(false)
+if (loadGreekModePreference()) errors.push('Greek mode preference did not persist as off.')
 delete globalThis.localStorage
 
 const answerPositions = new Set(

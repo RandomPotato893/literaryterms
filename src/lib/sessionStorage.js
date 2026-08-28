@@ -1,5 +1,6 @@
 const LEARN_SESSION_KEY = 'litmus-learn-session-v1'
 const LAST_VIEW_KEY = 'litmus-last-view-v1'
+const GREEK_MODE_KEY = 'litmus-greek-mode-v1'
 const SESSION_VERSION = 1
 const restorablePhases = new Set(['study', 'paused', 'complete'])
 
@@ -63,4 +64,14 @@ export function loadLastView(validViews) {
 export function saveLastView(view) {
   if (!storageAvailable()) return
   localStorage.setItem(LAST_VIEW_KEY, view)
+}
+
+export function loadGreekModePreference() {
+  if (!storageAvailable()) return false
+  return localStorage.getItem(GREEK_MODE_KEY) === 'on'
+}
+
+export function saveGreekModePreference(enabled) {
+  if (!storageAvailable()) return
+  localStorage.setItem(GREEK_MODE_KEY, enabled ? 'on' : 'off')
 }
