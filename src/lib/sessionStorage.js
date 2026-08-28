@@ -1,5 +1,7 @@
 const LEARN_SESSION_KEY = 'litmus-learn-session-v1'
 const LAST_VIEW_KEY = 'litmus-last-view-v1'
+// Separate from litmus-progress-v1. Missing or toggling this key must never
+// rewrite or delete a learner's saved term stats.
 const GREEK_MODE_KEY = 'litmus-greek-mode-v1'
 const SESSION_VERSION = 1
 const restorablePhases = new Set(['study', 'paused', 'complete'])

@@ -666,6 +666,7 @@ function ContinuousLearn({ terms, progress, recordLearn, replaceLearnStats, open
   const sessionGreekMode = phase === 'setup' ? greekMode : Boolean(round.greekMode)
   const pool = learnTermPool(terms, sessionGreekMode)
   const summary = summarizeProgress(pool, round.progress)
+  const savedSummary = summarizeProgress(terms, progress)
 
   if (phase === 'setup') {
     return (
@@ -681,8 +682,8 @@ function ContinuousLearn({ terms, progress, recordLearn, replaceLearnStats, open
         totalTermCount={terms.length}
         onStart={startSession}
         questionCount={countCompleteLearnQuestions(pool, selectedFormats)}
-        summary={summary}
-        total={pool.length}
+        summary={savedSummary}
+        total={terms.length}
       />
     )
   }
@@ -1017,7 +1018,7 @@ function LearnSessionSetup({
 
         {summary.seen > 0 && (
           <div className="learn-builder-progress">
-            <span>{greekMode ? 'Saved progress for these Greek-mode terms carries into every new session.' : 'Your saved progress carries into every new session.'}</span>
+            <span>Your saved progress carries into every new session.</span>
             <SetProgressSummary summary={summary} total={total} />
           </div>
         )}
