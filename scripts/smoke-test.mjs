@@ -14,19 +14,25 @@ import {
 import {
   getLearnStage,
   isMastered,
+  loadProgress,
   needsReview,
   replaceLearnAttempt,
+  saveProgress,
   statsFor,
+  summarizeProgress,
   updateLearnAttempt,
 } from '../src/lib/progress.js'
 import { eligibleLearnQuestions, learnFormatOrder } from '../src/lib/learn.js'
 import {
   clearLearnSession,
+  loadGreekModePreference,
   loadLastView,
   loadLearnSession,
+  saveGreekModePreference,
   saveLastView,
   saveLearnSession,
 } from '../src/lib/sessionStorage.js'
+import { filterGreekModeTerms, greekModeTermIds, learnTermPool } from '../src/data/greekMode.js'
 
 const terms = JSON.parse(readFileSync(new URL('../src/data/terms.json', import.meta.url), 'utf8'))
 const errors = []
@@ -205,6 +211,36 @@ if (countCompleteLearnQuestions(terms, []) !== 0 || buildCompleteLearnQuestions(
   errors.push('A Learn session with no enabled formats should contain no questions.')
 }
 
+const uniqueGreekModeIds = new Set(greekModeTermIds)
+const termIds = new Set(terms.map((term) => term.id))
+if (uniqueGreekModeIds.size !== greekModeTermIds.length) {
+  errors.push('Greek mode contains duplicate term IDs.')
+}
+for (const id of greekModeTermIds) {
+  if (!termIds.has(id)) errors.push(`Greek mode includes unknown term ID: ${id}.`)
+}
+const greekTerms = filterGreekModeTerms(terms)
+const greekConcepts = buildQuizConcepts(greekTerms)
+const greekLearnQuestions = buildCompleteLearnQuestions(greekTerms, enabledFormatIds)
+if (learnTermPool(terms, false).length !== terms.length) {
+  errors.push('The full Learn bank should be unchanged when Greek mode is off.')
+}
+if (greekTerms.length !== greekModeTermIds.length || greekTerms.length >= terms.length) {
+  errors.push(`Greek mode should contain a strict subset of terms; found ${greekTerms.length} of ${terms.length}.`)
+}
+if (countCompleteLearnQuestions(greekTerms, enabledFormatIds) !== greekConcepts.length * enabledFormatIds.length) {
+  errors.push('Greek-mode Learn question counts do not match the filtered concept bank.')
+}
+if (greekLearnQuestions.some((question) => !uniqueGreekModeIds.has(question.termId))) {
+  errors.push('A Greek-mode Learn session included a term outside the Greek-mode bank.')
+}
+if (greekLearnQuestions.filter((question) => question.format === 'example').length !== greekConcepts.length) {
+  errors.push('Greek mode did not include one example question per remaining concept.')
+}
+for (const term of greekTerms) {
+  checkQuestions(`greek-mode/${term.id}`, [buildLearnQuestion(term, 'recognition', greekTerms)])
+}
+
 const stagedQuestions = buildCompleteLearnQuestions(
   terms.slice(0, 3),
   ['free-response-definition', 'example'],
@@ -283,6 +319,166 @@ if (loadLastView(['home', 'learn']) !== 'learn' || loadLastView(['home']) !== 'h
 }
 clearLearnSession()
 if (loadLearnSession() !== null) errors.push('Explicitly clearing a Learn session did not remove it.')
+saveGreekModePreference(true)
+if (!loadGreekModePreference()) errors.push('Greek mode preference did not persist as on.')
+saveGreekModePreference(false)
+if (loadGreekModePreference()) errors.push('Greek mode preference did not persist as off.')
+
+const PROGRESS_KEY = 'litmus-progress-v1'
+const frozenTermIds = [
+  'allegory', 'allusion', 'ambiguity', 'anachronism', 'analogy', 'anaphora', 'anastrophe',
+  'anecdote', 'antimetabole', 'antithesis', 'anti-hero', 'antagonist', 'aphorism', 'apostrophe',
+  'assonance', 'blank-verse', 'cacophony', 'caesura', 'catharsis', 'chiasmus', 'cliche', 'climax',
+  'comic-relief', 'conceit', 'conflict-external-vs-internal', 'connotation', 'consonance', 'couplet',
+  'denotation', 'deus-ex-machina', 'dramatic-irony', 'dynamic-character-vs-static',
+  'direct-characterization-vs-indirect', 'elegy', 'enjambment', 'epiphany', 'epithet', 'epistrophe',
+  'euphemism', 'euphony', 'falling-action', 'figurative-language', 'flat-character-vs-round',
+  'flashback', 'foil', 'foreshadowing', 'hyperbole', 'imagery', 'internal-rhyme', 'inversion',
+  'irony-verbal-situational-dramatic', 'juxtaposition', 'litotes', 'lyric-poem',
+  'metaphor-implied-extended-dead-mixed', 'metonymy', 'mood', 'motif', 'motivation-of-a-character',
+  'objective-point-of-view', 'omniscient-point-of-view', 'onomatopoeia', 'oxymoron', 'paradox',
+  'parallelism', 'paraphrase', 'personification', 'plot-exposition-rising-action-climax-resolution-denouement',
+  'point-of-view-1st-3rd-omniscient-objective', 'pun', 'quatrain', 'refrain', 'repetition',
+  'rhetorical-question', 'satire', 'setting-time-place-situation', 'simile', 'soliloquy', 'stanza',
+  'stream-of-consciousness', 'symbol', 'synecdoche', 'syntax', 'theme', 'tone', 'tragedy', 'understatement',
+]
+if (terms.map((term) => term.id).join('|') !== frozenTermIds.join('|')) {
+  errors.push('Term ids changed. That would orphan client-side Learn progress keyed by those ids.')
+}
+if (greekModeTermIds.some((id) => !frozenTermIds.includes(id))) {
+  errors.push('Greek mode contains a term id that is not in the saved-progress key set.')
+}
+
+function masteredRecord(lastSeen) {
+  return {
+    definitionCorrect: 2,
+    definitionAttempts: 2,
+    recognitionCorrect: 2,
+    recognitionAttempts: 2,
+    recognitionStreak: 1,
+    typedCorrect: 1,
+    typedAttempts: 1,
+    typedStreak: 1,
+    exampleCorrect: 1,
+    exampleAttempts: 1,
+    exampleStreak: 1,
+    starred: false,
+    lastSeen,
+  }
+}
+
+const returningUserProgress = {
+  simile: masteredRecord('2026-06-01T12:00:00.000Z'),
+  theme: masteredRecord('2026-06-02T12:00:00.000Z'),
+  allegory: {
+    definitionCorrect: 1,
+    definitionAttempts: 2,
+    recognitionCorrect: 1,
+    recognitionAttempts: 2,
+    recognitionStreak: 0,
+    typedCorrect: 0,
+    typedAttempts: 1,
+    typedStreak: 0,
+    exampleCorrect: 0,
+    exampleAttempts: 0,
+    exampleStreak: 0,
+    starred: true,
+    lastSeen: '2026-06-03T12:00:00.000Z',
+  },
+  flashback: {
+    definitionCorrect: 4,
+    definitionAttempts: 4,
+    exampleCorrect: 2,
+    exampleAttempts: 2,
+    starred: false,
+    lastSeen: '2026-05-01T00:00:00.000Z',
+  },
+}
+
+const progressSnapshot = JSON.stringify(returningUserProgress)
+storageData.set(PROGRESS_KEY, progressSnapshot)
+storageData.set('litmus-learn-session-v1', JSON.stringify({
+  version: 1,
+  phase: 'paused',
+  round: {
+    progress: returningUserProgress,
+    enabledFormats: ['multiple-choice-term', 'example'],
+    questions: stagedQuestions,
+    question: stagedQuestions[0],
+    completedIds: [stagedQuestions[1].id],
+    results: [],
+  },
+  ui: persistedFixture.ui,
+}))
+
+const loadedReturningProgress = loadProgress()
+if (JSON.stringify(loadedReturningProgress) !== progressSnapshot) {
+  errors.push('Loading progress rewrote a returning user’s saved stats.')
+}
+
+const restoredLegacySession = loadLearnSession()
+if (!restoredLegacySession) {
+  errors.push('A pre-Greek-mode in-progress Learn session was discarded.')
+} else if (restoredLegacySession.round.greekMode) {
+  errors.push('Restoring a legacy Learn session injected Greek mode onto it.')
+}
+if (storageData.get(PROGRESS_KEY) !== progressSnapshot) {
+  errors.push('Restoring a Learn session mutated litmus-progress-v1.')
+}
+
+saveGreekModePreference(true)
+if (storageData.get(PROGRESS_KEY) !== progressSnapshot) {
+  errors.push('Turning on Greek mode mutated saved Learn progress.')
+}
+if (!storageData.get('litmus-learn-session-v1')) {
+  errors.push('Turning on Greek mode deleted an in-progress Learn session.')
+}
+
+const fullSummaryBefore = summarizeProgress(terms, returningUserProgress)
+const fullSummaryAfter = summarizeProgress(terms, loadProgress())
+if (JSON.stringify(fullSummaryBefore) !== JSON.stringify(fullSummaryAfter)) {
+  errors.push('Greek mode changed mastery totals for the full 87-term bank.')
+}
+if (fullSummaryBefore.mastered !== 2 || fullSummaryBefore.seen !== 4) {
+  errors.push(`Unexpected baseline mastery for the compatibility fixture: seen ${fullSummaryBefore.seen}, mastered ${fullSummaryBefore.mastered}.`)
+}
+
+const v1Flashback = statsFor(returningUserProgress, 'flashback')
+if (getLearnStage(v1Flashback) !== 'written') {
+  errors.push('v1 progress without recognition fields is no longer mapped the same way.')
+}
+if (v1Flashback.recognitionAttempts !== 4 || v1Flashback.recognitionCorrect !== 4 || v1Flashback.exampleStreak !== 2) {
+  errors.push('v1 flashback stats were not carried forward with the original recognition and example evidence.')
+}
+
+const afterOneAnswer = updateLearnAttempt(loadedReturningProgress, 'allegory', 'recognition', true)
+if (JSON.stringify(afterOneAnswer.simile) !== JSON.stringify(loadedReturningProgress.simile)) {
+  errors.push('Recording a Learn answer mutated another term’s saved stats.')
+}
+if (JSON.stringify(afterOneAnswer.flashback) !== JSON.stringify(loadedReturningProgress.flashback)) {
+  errors.push('Recording a Learn answer rewrote an untouched v1 term.')
+}
+if (JSON.stringify(Object.keys(afterOneAnswer).sort()) !== JSON.stringify(Object.keys(loadedReturningProgress).sort())) {
+  errors.push('Recording a Learn answer added or removed progress keys.')
+}
+
+saveProgress(loadedReturningProgress)
+if (storageData.get(PROGRESS_KEY) !== progressSnapshot) {
+  errors.push('Re-saving unmodified progress changed the stored JSON for a returning user.')
+}
+
+const poolOff = learnTermPool(terms, false)
+const poolOn = learnTermPool(terms, true)
+if (poolOff !== terms || poolOff.length !== 87) {
+  errors.push('Greek mode off no longer uses the complete 87-term bank.')
+}
+if (summarizeProgress(poolOff, loadedReturningProgress).mastered !== fullSummaryBefore.mastered) {
+  errors.push('The unfiltered Learn bank no longer reports the same mastered count.')
+}
+if (summarizeProgress(poolOn, loadedReturningProgress).mastered !== 0) {
+  errors.push('Greek-mode display stats unexpectedly counted elementary mastered terms.')
+}
+
 delete globalThis.localStorage
 
 const answerPositions = new Set(
